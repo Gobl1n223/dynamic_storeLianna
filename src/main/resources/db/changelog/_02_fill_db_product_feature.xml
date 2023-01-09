@@ -5,247 +5,54 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
-    <changeSet id="1652953076529-2" author="suvorov">
+    <changeSet id="1652953076529-2" author="zubchenko">
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Код производителя"/>
+            <column name="name" value="Артикул"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки для воды')"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Видеопамять"/>
+            <column name="name" value="Артикул"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Рекомендуемый блок питания"/>
+            <column name="name" value="Артикул"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Техпроцесс"/>
+            <column name="name" value="Артикул"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Футболки')"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Длина видеокарты"/>
+            <column name="name" value="Размер"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Гарантия"/>
+            <column name="name" value="Размер"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Футболки')"/>
         </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Частота"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Техпроцесс"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Количество ядер"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Количество потоков"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Код производителя"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Сокет"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Тип памяти"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Гарантия"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Объем кэша L2"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Объем кэша L3"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Тип памяти"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Количество модулей в упаковке"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Код производителя"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Тактовая частота"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Тайминги"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Форм-фактор"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Гарантия"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Гарантия"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Объем накопителя"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Количество бит на ячейку"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Код производителя"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Форм-фактор"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Скорость записи"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product_feature">
-            <column name="name" value="Скорость чтения"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
     </changeSet>
 </databaseChangeLog>
