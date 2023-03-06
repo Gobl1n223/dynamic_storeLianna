@@ -12,7 +12,7 @@
     08. shop page css here
     09. error page css heer 
     10. about page css here
-    11. blog page css here 
+    11. blog page css here
     12. blog details css here
     13. cart page css here
     14. checkout page css here
@@ -3540,6 +3540,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_carousel .col-lg-3 {
   flex: 0 0 100%;
   width: 100%;
+  height: 100px;
 }
 .product_carousel:hover .owl-nav div {
   opacity: 1;
@@ -10820,6 +10821,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   .privacy_content.section_3 h2 {
     margin-bottom: 12px;
   }
+}
+
+.primary_img img {
+  height: 250px;
 }
 
 /*privacy policy css end*/

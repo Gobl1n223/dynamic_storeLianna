@@ -10,177 +10,146 @@
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Видеокарта MSI GeForce RTX 3060 Ti GAMING Z TRIO"/>
-            <column name="price" value="85299"/>
+            <column name="name" value="Красное худи"/>
+            <column name="price" value="1200"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
-            <column name="picture" value="https://img.mvideo.ru/Pdb/30062478b.jpg"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+            <column name="picture" value="https://pinq.ru/thumbnails/uploads/7f35da736c30f2a46a647086366876cb_1637838201162_medium.jpg"/>
             <column name="rating" value="5"/>
             <column name="amount" value="15"/>
-            <column name="price_without_discount" value="91999"/>
+            <column name="price_without_discount" value="1600"/>
+        </insert>
+
+
+        <insert
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="Фиолетовое худи"/>
+            <column name="price" value="4990"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+            <column name="picture" value="https://ltdfoto.ru/images/2023/03/06/DuolNG_tZ0o.jpg"/>
+            <column name="rating" value="4.8"/>
+            <column name="amount" value="23"/>
+            <column name="price_without_discount" value="5500"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Видеокарта MSI GeForce RTX 3050 GAMING X"/>
-            <column name="price" value="46799"/>
+            <column name="name" value="Серое худи"/>
+            <column name="price" value="1500"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
-            <column name="picture" value="https://avatars.mds.yandex.net/get-mpic/5129282/img_id273744720833458297.png/600x600"/>
-            <column name="rating" value="3"/>
-            <column name="amount" value="5"/>
-            <column name="price_without_discount" value="50999"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+            <column name="picture" value="https://storage.yandexcloud.net/printio/assets/realistic_views/hoodie/tile/cfb9231409d766c1a3d0b71d7b3a4666dafe52ee.png"/>
+            <column name="rating" value="4.9"/>
+            <column name="amount" value="28"/>
+            <column name="price_without_discount" value="1990"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Видеокарта GIGABYTE GeForce RTX 3050 GAMING OC"/>
-            <column name="price" value="49399"/>
+            <column name="name" value="Женское худи"/>
+            <column name="price" value="1800"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
-            <column name="picture" value="https://i.imgur.com/kBWgeuK.jpg"/>
-            <column name="rating" value="4"/>
-            <column name="amount" value="4"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+            <column name="picture" value="https://blog.emergentum.com/ru/wp-content/uploads/2018/10/2018-10-07_10-48-38.png"/>
+            <column name="rating" value="4.4"/>
+            <column name="amount" value="32"/>
+            <column name="price_without_discount" value="2200"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Видеокарта GIGABYTE GeForce RTX 2060 D6 6G"/>
-            <column name="price" value="42999"/>
+            <column name="name" value="Черная кофта"/>
+            <column name="price" value="2000"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Видеокарты')"/>
-            <column name="picture" value="https://ae04.alicdn.com/kf/S4b4ed796b3994d5dad95abe619d7ec9eG.jpg"/>
-            <column name="rating" value="4"/>
-            <column name="amount" value="2"/>
-            <column name="price_without_discount" value="44999"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+            <column name="picture" value="https://ae04.alicdn.com/kf/S02c9d887931e4240971313fba7483e93C.jpg"/>
+            <column name="rating" value="4.2"/>
+            <column name="amount" value="46"/>
+            <column name="price_without_discount" value="2300"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Процессор AMD Ryzen 5 3600 OEM"/>
-            <column name="price" value="16999"/>
+            <column name="name" value="Белая кружка"/>
+            <column name="price" value="400"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-            <column name="picture" value="https://main-cdn.sbermegamarket.ru/big1/hlr-system/384/221/048/528/179/100025033635b0.jpg"/>
-            <column name="rating" value="5"/>
-            <column name="amount" value="25"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="https://kaplya24.ru/wp-content/uploads/2017/12/3-20.jpg"/>
+            <column name="rating" value="4.8"/>
+            <column name="amount" value="121"/>
+            <column name="price_without_discount" value="500"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Процессор Intel Core i5-10400F BOX"/>
-            <column name="price" value="12799"/>
+            <column name="name" value="Кружка 'С днем железнодорожника'"/>
+            <column name="price" value="600"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-            <column name="picture" value="https://img.mvideo.ru/Pdb/30057993b.jpg"/>
-            <column name="rating" value="4"/>
-            <column name="amount" value="12"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="https://www.kars.ru/images/goods/118729/118729-1.jpg"/>
+            <column name="rating" value="4.9"/>
+            <column name="amount" value="112"/>
+            <column name="price_without_discount" value="700"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Процессор AMD Ryzen 5 5600X OEM"/>
-            <column name="price" value="20499"/>
+            <column name="name" value="Металлическая кружка"/>
+            <column name="price" value="550"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-            <column name="picture" value="https://main-cdn.sbermegamarket.ru/big1/hlr-system/149/791/355/811/218/39/100027796987b0.jpg"/>
-            <column name="rating" value="4"/>
-            <column name="amount" value="11"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="hhttps://www.kars.ru/images/goods/118729/118729-1.jpg"/>
+            <column name="rating" value="4.5"/>
+            <column name="amount" value="34"/>
+            <column name="price_without_discount" value="650"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Процессор Intel Core i5-11400F OEM"/>
-            <column name="price" value="14899"/>
+            <column name="name" value="Позолоченая кружка"/>
+            <column name="price" value="440"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Процессоры')"/>
-            <column name="picture" value="https://img.mvideo.ru/Pdb/30062444b.jpg"/>
-            <column name="price_without_discount" value="15899"/>
-
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="https://souvenir-vip.ru/wa-data/public/shop/products/92/21/2192/images/6626/6626.970.jpg"/>
+            <column name="rating" value="4.7"/>
+            <column name="amount" value="67"/>
+            <column name="price_without_discount" value="550"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Оперативная память Kingston FURY Beast Black 16 гб"/>
-            <column name="price" value="8299"/>
+            <column name="name" value="Кружка с поездом"/>
+            <column name="price" value="550"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="https://cdn1.ozone.ru/s3/multimedia-4/6283439200.jpg"/>
+            <column name="rating" value="4.8"/>
+            <column name="amount" value="89"/>
+            <column name="price_without_discount" value="650"/>
         </insert>
 
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Оперативная память AMD Radeon R7 Performance Series 8 ГБ"/>
-            <column name="price" value="2299"/>
+            <column name="name" value="Кружка хамелеон"/>
+            <column name="price" value="500"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+            <column name="picture" value="https://static.regmarkets.ru/listpreview/images3/3b/0d/3b0d687c0abfbb740f9373444a58b006.jpg"/>
+            <column name="rating" value="3.9"/>
+            <column name="amount" value="90"/>
+            <column name="price_without_discount" value="700"/>
         </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="Оперативная память A-Data XPG Lancer RGB 32 ГБ"/>
-            <column name="price" value="22999"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Оперативная память')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="500 ГБ 2.5 SSD SATA накопитель Samsung 870 EVO"/>
-            <column name="price" value="8999"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="240 ГБ SSD 2.5 SATA накопитель Kingston A400"/>
-            <column name="price" value="2699"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="1000 ГБ SSD M.2 накопитель Samsung 980"/>
-            <column name="price" value="13299"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="120 ГБ SSD M.2 накопитель ExeGate NextPro UV500TS120"/>
-            <column name="price" value="1750"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-        <insert
-                schemaName="public"
-                tableName="product">
-            <column name="name" value="480 ГБ 2.5 SSD SATA накопитель Kingston A400"/>
-            <column name="price" value="4699"/>
-            <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='ssd')"/>
-        </insert>
-
-
-
-
 
 
     </changeSet>
