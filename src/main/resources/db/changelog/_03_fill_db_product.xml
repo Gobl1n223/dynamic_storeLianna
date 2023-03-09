@@ -89,7 +89,7 @@
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Кружка 'С днем железнодорожника'"/>
+            <column name="name" value="Кружка С днем железнодорожника"/>
             <column name="price" value="600"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
@@ -154,7 +154,7 @@
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Кружка 'Путь'"/>
+            <column name="name" value="Кружка Путь"/>
             <column name="price" value="350"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>

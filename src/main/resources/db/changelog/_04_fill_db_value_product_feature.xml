@@ -13,12 +13,120 @@
                 tableName="value_product_feature">
             <column name="value" value="L, M, XL, XL"/>
             <column name="product_id"
-                    valueComputed="(select p.id from product p where p.product_type_id = 2)"/>
+                    valueComputed="(select p.id from product p where p.name = 'Красное худи')"/>
             <column name="product_feature_id"
                     valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
         </insert>
 
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="L, M, XL, XL"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Фиолетовое худи')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
+        </insert>
 
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="L, M, XL, XL"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Серое худи')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="L, M, XL, XL"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Женское худи')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="L, M, XL, XL"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Черная кофта')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="5235"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Белая кружка')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="15243"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Кружка С днем железнодорожника')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="15151"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Металлическая кружка')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="2325"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Позолоченая кружка')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="4215"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Кружка с поездом')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="3255"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Кружка хамелеон')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="value_product_feature">
+            <column name="value" value="54215"/>
+            <column name="product_id"
+                    valueComputed="(select p.id from product p where p.name = 'Кружка Путь')"/>
+            <column name="product_feature_id"
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Артикул' and pt.name_category = 'Кружки')"/>
+        </insert>
 
 
     </changeSet>
