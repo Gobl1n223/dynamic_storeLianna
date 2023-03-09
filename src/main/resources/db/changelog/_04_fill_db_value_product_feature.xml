@@ -11,12 +11,14 @@
         <insert
                 schemaName="public"
                 tableName="value_product_feature">
-            <column name="value" value="L"/>
+            <column name="value" value="L, M, XL, XL"/>
             <column name="product_id"
-                    valueComputed="(select p.id from product p where p.name = 'Красное худи')"/>
+                    valueComputed="(select p.id from product p where p.product_type_id = 2)"/>
             <column name="product_feature_id"
-                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размер' and pt.name_category = 'Худи')"/>
+                    valueComputed="(select pf.id from product_feature pf inner join product_type pt on pf.product_type_id = pt.id where pf.name = 'Размеры' and pt.name_category = 'Худи')"/>
         </insert>
+
+
 
 
     </changeSet>

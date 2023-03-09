@@ -45,22 +45,13 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="product-details-tab">
-                        <div id="img-1" class="zoomWrapper single-zoom">
+                        <div id="img1" class="zoomWrapper 2single-zoom">
                             <a href="#">
-                                <img id="zoom1" th:src="${productDetail.getPictures().get(0)}" th:height="600" th:width="600"
-                                     th:data-zoom-image="${productDetail.getPictures().get(0)}" alt="big-1">
+                                <img id="zoom" th:src="${productDetail.getPictures().get(0)}" style="height: 600px;">
                             </a>
                         </div>
                         <div class="single-zoom-thumb">
-                            <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
-                                <li th:each="picture : ${productDetail.getPictures()}" th:height="600" th:width="600">
-                                    <a href="#" class="elevatezoom-gallery active" data-update=""
-                                       th:data-image="${picture}"
-                                       th:data-zoom-image="${picture}" th:height="600" th:width="600">
-                                        <img th:src="${picture}" th:height="600" th:width="600" alt="zo-th-1"/>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Размер"/>
+            <column name="name" value="Размеры"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
         </insert>
@@ -50,7 +50,7 @@
         <insert
                 schemaName="public"
                 tableName="product_feature">
-            <column name="name" value="Размер"/>
+            <column name="name" value="Размеры"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Футболки')"/>
         </insert>
