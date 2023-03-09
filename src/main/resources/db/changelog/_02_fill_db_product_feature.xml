@@ -12,7 +12,7 @@
                 tableName="product_feature">
             <column name="name" value="Артикул"/>
             <column name="product_type_id"
-                    valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки для воды')"/>
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки')"/>
         </insert>
 
         <insert

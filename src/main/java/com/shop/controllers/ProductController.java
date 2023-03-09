@@ -61,10 +61,10 @@ public class ProductController {
         List<CategoryDto> categories = productTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<ProductShortDto> productShortDtos0 = productTypeService.getShortByCategory("Видеокарты", page);
+        List<ProductShortDto> productShortDtos0 = productTypeService.getShortByCategory("Футболки", page);
         model.addAttribute("productFirst", productShortDtos0);
 
-        List<ProductShortDto> productShortDtos1 = productTypeService.getShortByCategory("Процессоры", page);
+        List<ProductShortDto> productShortDtos1 = productTypeService.getShortByCategory("Кружки", page);
         model.addAttribute("productSecond", productShortDtos1);
 
         List<ProductShortDto> products = productService.getProductByDiscount(page);

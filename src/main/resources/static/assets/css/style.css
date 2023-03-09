@@ -3231,6 +3231,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /* 03. product section css here */
 .tab-content > .tab-pane.active {
+  height: 350px;
   display: block;
   height: auto;
   opacity: 1;
@@ -3238,6 +3239,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .tab-content > .tab-pane {
+  height: 350px;
   display: block;
   height: 0;
   opacity: 0;
@@ -3604,13 +3606,16 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .product_deals_container .single_product {
+  height: 350px;
   opacity: 0.5;
   transition: .3s;
 }
 .product_deals_container .single_product:hover {
+  height: 350px;
   opacity: 1;
 }
 .product_deals_container .single_product:hover .product_timing {
+  height: 350px;
   opacity: 1;
   visibility: visible;
   bottom: 0;
@@ -5555,11 +5560,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .shop_reverse .tab-content .row {
+    height: 350px;
     flex-direction: row;
   }
 }
 @media only screen and (max-width: 767px) {
   .shop_reverse .tab-content .row {
+    height: 350px;
     flex-direction: row;
   }
 }

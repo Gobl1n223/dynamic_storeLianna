@@ -11,7 +11,7 @@
                 schemaName="public"
                 tableName="product_type">
 
-            <column name="name_category" value="Бутылки для воды"/>
+            <column name="name_category" value="Бутылки"/>
             <column name="picture" value="https://static.tildacdn.com/tild3331-3364-4461-b662-623032336637/220EE274-EF8A-4629-8.jpeg"/>
         </insert>
         <insert
