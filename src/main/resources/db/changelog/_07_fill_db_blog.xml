@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1652953076529-2" author="zubchenko">
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="10.03.2023 13:55"/>
+            <column name="header" value="В День космонавтики отправиться в поездку на «Сапсане» можно по сниженным фиксированным ценам"/>
+            <column name="subtitle" value="Пассажиры, планирующие поездку 12 апреля из Москвы в Санкт-Петербург или из Санкт-Петербурга в Москву, могут воспользоваться специальной тарифной акцией и приобрести билеты по сниженным фиксированным ценам на высокоскоростные поезда"/>
+            <column name="picture" value="https://www.livekuban.ru/sites/default/files/styles/news/public/node/news/main-image/2022-04/segodnya-v-rossii-otmechaetsya-den-kosmonavtiki.jpeg?itok=ii1cTUcZ"/>
+            <column name="blog_category_id" value="1"/>
+    </insert>
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="09.03.2023 14:24"/>
+            <column name="header" value="Курсирование электричек в формате «наземного метро» по единому городскому тарифу в Екатеринбурге привлекло на железную дорогу новых пассажиров"/>
+            <column name="subtitle" value="Свердловская магистраль подвела первые итоги работы по единому городскому тарифу (ЕГТ) в формате «наземного метро» в электричках в черте Екатеринбурга."/>
+            <column name="picture" value="https://www.rzd.ru/api/media/resources/1920779"/>
+            <column name="blog_category_id" value="1"/>
+        </insert>
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="07.03.2023 12:55"/>
+            <column name="header" value="7 и 8 марта изменяется расписание движения пригородных поездов в Республике Башкортостан"/>
+            <column name="subtitle" value="Расписание движения пригородных поездов, курсирующих по территории Республики Башкортостан, изменится в связи с празднованием Международного женского дня."/>
+            <column name="picture" value="https://carnovato.ru/wp-content/uploads/2016/06/521244226574e9bd262f2d0.34462382.jpg"/>
+            <column name="blog_category_id" value="1"/>
+        </insert>
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="07.03.2023 10:12"/>
+            <column name="header" value="Расписание некоторых поездов Киевского направления Московской железной дороги изменится в выходные дни марта"/>
+            <column name="subtitle" value="Расписание некоторых пригородных поездов Киевского направления МЖД изменится по выходным дням 11-12, 18-19, 25-26 марта в связи с работами по развитию инфраструктуры на станциях Лесной городок и Очаково для запуска"/>
+            <column name="picture" value="https://cdnn21.img.ria.ru/images/07e6/06/01/1792265052_0:291:3072:2019_1920x0_80_0_0_92eb7af44040d41e785e59b1e7ba7596.jpg"/>
+            <column name="blog_category_id" value="1"/>
+        </insert>
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="06.03.2023 15:55"/>
+            <column name="header" value="В Москве открылся после реконструкции остановочный пункт Очаково будущего МЦД-4"/>
+            <column name="subtitle" value="В Москве завершилась комплексная реконструкция остановочного пункта будущего МЦД-4 Очаково. Он полностью готов к интеграции в МЦД-4, который соединит Апрелевку и Железнодорожный уже к концу лета этого года."/>
+            <column name="picture" value="https://im.kommersant.ru/Issues.photo/CORP/2022/08/16/KMO_189562_00071_1_t222_181122.jpg"/>
+            <column name="blog_category_id" value="1"/>
+        </insert>
+
+        <insert schemaName="public"
+                tableName="blog">
+            <column name="author" value="РЖД"/>
+            <column name="date" value="06.03.2023 10:01"/>
+            <column name="header" value="Расписание пригородных поездов Красноярской железной дороги изменится 8 марта"/>
+            <column name="subtitle" value="В праздничный день 8 Марта компания «Краспригород» вносит изменения в график движения электропоездов. В этот день пригородные поезда будут курсировать по расписанию субботы."/>
+            <column name="picture" value="https://mcdn.tvzvezda.ru/storage/news_other_images/2019/05/13/bfd4ec05a9694536bd2471ed46b1b526.jpg"/>
+            <column name="blog_category_id" value="1"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

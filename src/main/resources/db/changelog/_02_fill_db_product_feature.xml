@@ -18,9 +18,65 @@
         <insert
                 schemaName="public"
                 tableName="product_feature">
+            <column name="name" value="Материал"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Материал"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Кружки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Объем"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
             <column name="name" value="Артикул"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Цвет"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Цвет"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Футболки')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Состав"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Худи')"/>
+        </insert>
+
+        <insert
+                schemaName="public"
+                tableName="product_feature">
+            <column name="name" value="Состав"/>
+            <column name="product_type_id"
+                    valueComputed="(SELECT product_type.id from product_type where name_category='Футболки')"/>
         </insert>
 
         <insert

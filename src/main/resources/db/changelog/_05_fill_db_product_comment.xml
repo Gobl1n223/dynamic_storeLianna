@@ -11,31 +11,13 @@
                 schemaName="public"
                 tableName="product_comment">
 
-            <column name="author" value="Видеокарты"/>
-            <column name="picture" value="https://www.tradeinn.com/f/13743/137432066/msi-enthusiast-geforce-rtx-2060-ventus-xs-6gb-gddr6-graphic-card.jpg"/>
+            <column name="author" value="Валентина"/>
+            <column name="rating" value="5"/>
+            <column name="text" value="Все пришло быстро, размер подошле"/>
+            <column name="date" value="10.03.2023"/>
+            <column name="product_id" value="1"/>
         </insert>
-        <insert
-                schemaName="public"
-                tableName="product_type">
 
-            <column name="name_category" value="Процессоры"/>
-            <column name="picture" value="https://img.mvideo.ru/Pdb/1100027174248b.jpg"/>
-
-        </insert>
-        <insert
-                schemaName="public"
-                tableName="product_type">
-
-            <column name="name_category" value="Оперативная память"/>
-            <column name="picture" value="https://img.mvideo.ru/Pdb/30058350b.jpg"/>
-        </insert>
-        <insert
-                schemaName="public"
-                tableName="product_type">
-
-            <column name="name_category" value="ssd"/>
-            <column name="picture" value="https://avatars.mds.yandex.net/get-mpic/1589815/img_id2188759204821211548.jpeg/600x600"/>
-        </insert>
 
     </changeSet>
 </databaseChangeLog>

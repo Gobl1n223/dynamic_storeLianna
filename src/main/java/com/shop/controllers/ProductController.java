@@ -94,6 +94,22 @@ public class ProductController {
         return "product-details";
     }
 
+    @GetMapping("product/product/{id}")
+    public String getProductById1(@PathVariable Long id, Model model) {
+        ProductDto productDto = productService.getById(id);
+        model.addAttribute("productDetail", productDto);
+
+        Pageable page = PageRequest.of(0,8);
+        List<CategoryDto> categories = productTypeService.getCategories();
+        model.addAttribute("categories", categories);
+
+        List<ProductShortDto> similarProducts = productTypeService.getShortByCategory(productDto.getCategory(), page);
+        model.addAttribute("products", similarProducts);
+
+        model.addAttribute("commentDto", new ProductReviewCommentDto());
+
+        return "product-details";
+    }
 
     @GetMapping("categories")
     public String getCategories(Model model) {

@@ -24,8 +24,7 @@ public interface BlogMapper {
 
     default String changeDateToString(Blog blog) {
 
-        LocalDateTime date = blog.getDate();
-        return date.format(DateTimeFormatter.ISO_LOCAL_DATE);
+        return blog.getDate();
     }
 
 }

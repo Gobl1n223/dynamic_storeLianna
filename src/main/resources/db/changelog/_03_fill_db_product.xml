@@ -258,7 +258,7 @@
         <insert
                 schemaName="public"
                 tableName="product">
-            <column name="name" value="Меиалличпеская бутылка РЖД "/>
+            <column name="name" value="Металличпеская бутылка РЖД "/>
             <column name="price" value="1300"/>
             <column name="product_type_id"
                     valueComputed="(SELECT product_type.id from product_type where name_category='Бутылки')"/>

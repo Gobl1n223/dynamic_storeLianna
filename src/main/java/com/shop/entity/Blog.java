@@ -30,7 +30,7 @@ public class Blog {
     @NotNull
     private String author;
 
-    private LocalDateTime date;
+    private String date;
 
     private String header;
 
