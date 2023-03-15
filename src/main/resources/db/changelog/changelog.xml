@@ -22,6 +22,7 @@
     <include file="_04_fill_db_value_product_feature.xml" relativeToChangelogFile="true"/>
     <include file="_06_fill_db_blog_category.xml" relativeToChangelogFile="true"/>
     <include file="_07_fill_db_blog.xml" relativeToChangelogFile="true"/>
+    <include file="_10_fill_db_blog_details.xml" relativeToChangelogFile="true"/>
 
 
 </databaseChangeLog>
