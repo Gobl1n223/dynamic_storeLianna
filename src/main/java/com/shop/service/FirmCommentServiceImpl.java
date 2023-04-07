@@ -2,34 +2,34 @@ package com.shop.service;
 
 import com.shop.dto.comment.FirmReviewCommentDto;
 import com.shop.entity.FirmComment;
-import com.shop.exception.ProductNotFoundException;
+import com.shop.exception.FirmNotFoundException;
 import com.shop.mapper.CommentMapper;
-import com.shop.repository.ProductCommentRepository;
-import com.shop.repository.ProductRepository;
+import com.shop.repository.FirmCommentRepository;
+import com.shop.repository.FirmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FirmCommentServiceImpl implements FirmCommentService {
-    private final ProductCommentRepository productCommentRepository;
+    private final FirmCommentRepository firmCommentRepository;
     private final CommentMapper commentMapper;
-    private final ProductRepository productRepository;
+    private final FirmRepository firmRepository;
 
 
     @Autowired
-    public FirmCommentServiceImpl(ProductCommentRepository productCommentRepository, CommentMapper commentMapper,
-                                  ProductRepository productRepository
+    public FirmCommentServiceImpl(FirmCommentRepository firmCommentRepository, CommentMapper commentMapper,
+                                  FirmRepository firmRepository
     ) {
-        this.productCommentRepository = productCommentRepository;
+        this.firmCommentRepository = firmCommentRepository;
         this.commentMapper = commentMapper;
-        this.productRepository = productRepository;
+        this.firmRepository = firmRepository;
     }
 
 
     @Override
     public void saveComment(FirmReviewCommentDto firmReviewCommentDto, Long id) {
         FirmComment firmComment = commentMapper.toEntity(firmReviewCommentDto, id);
-        firmComment.setFirm(productRepository.findById(id).orElseThrow(ProductNotFoundException::new));
-        productCommentRepository.save(firmComment);
+        firmComment.setFirm(firmRepository.findById(id).orElseThrow(FirmNotFoundException::new));
+        firmCommentRepository.save(firmComment);
     }
 }

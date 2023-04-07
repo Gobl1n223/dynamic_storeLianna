@@ -57,15 +57,15 @@ public class Firm {
     @JsonIgnore
     private FirmType firmType;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "product")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
     private Set<ValueFirmFeature> valueFirmFeature;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "product")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
 
     private Set<FirmPicture> firmPictures;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "product")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
     private Set<FirmComment> firmComment;
 

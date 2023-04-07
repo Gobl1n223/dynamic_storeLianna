@@ -11,10 +11,10 @@ import java.util.List;
 public interface FirmService {
 
      FirmDto getById(Long id);
-     List<FirmShortDto> getProductsByName(String name);
+     List<FirmShortDto> getFirmsByName(String name);
 
-     List<FirmShortDto> getProductByDiscount(Pageable page);
+     List<FirmShortDto> getFirmByDiscount(Pageable page);
 
-     List<BasketFirmDto> getProductsForBasketByIds(String ids);
+     List<BasketFirmDto> getFirmsForBasketByIds(String ids);
 
 }

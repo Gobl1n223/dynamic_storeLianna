@@ -26,5 +26,5 @@ public class FirmPicture {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
-    private FirmType product;
+    private FirmType firm;
 }

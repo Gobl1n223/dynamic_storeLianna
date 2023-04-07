@@ -3,11 +3,11 @@ package com.shop.service;
 import com.shop.dto.CategoryDto;
 import com.shop.dto.FirmShortDto;
 import com.shop.exception.CategoryNotFoundException;
-import com.shop.exception.ProductNotFoundException;
+import com.shop.exception.FirmNotFoundException;
 import com.shop.mapper.FirmMapper;
 import com.shop.mapper.FirmTypeMapper;
-import com.shop.repository.ProductRepository;
-import com.shop.repository.ProductTypeRepository;
+import com.shop.repository.FirmRepository;
+import com.shop.repository.FirmTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,17 +20,17 @@ import static java.util.stream.Collectors.toList;
 public class FirmTypeServiceImpl implements FirmTypeService {
 
 
-    private final ProductTypeRepository productTypeRepository;
+    private final FirmTypeRepository productTypeRepository;
     private final FirmTypeMapper firmTypeMapper;
-    private final ProductRepository productRepository;
+    private final FirmRepository productRepository;
     private final FirmMapper productMapper;
 
 
     @Autowired
     public FirmTypeServiceImpl(
-            ProductTypeRepository productTypeRepository,
+            FirmTypeRepository productTypeRepository,
             FirmTypeMapper firmTypeMapper,
-            ProductRepository productRepository,
+            FirmRepository productRepository,
             FirmMapper productMapper
     ) {
         this.productTypeRepository = productTypeRepository;
@@ -45,14 +45,14 @@ public class FirmTypeServiceImpl implements FirmTypeService {
                 .map(firmTypeMapper::toDto).collect(toList());
 
         if (categoryDtos.isEmpty())
-            throw new ProductNotFoundException("Продукт не найден");
+            throw new FirmNotFoundException("Продукт не найден");
 
         return categoryDtos;
     }
 
     @Override
     public List<FirmShortDto> getShortByCategory(String category, Pageable page) {
-        List<FirmShortDto> firmShortDtos = productRepository.findProductsByCategory(category, page).stream()
+        List<FirmShortDto> firmShortDtos = productRepository.findFirmsByCategory(category, page).stream()
                 .map(productMapper::toShortDto)
                 .collect(toList());
 

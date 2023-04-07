@@ -4,13 +4,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class ProductNotFoundException extends ParentException{
+public class FirmNotFoundException extends ParentException{
 
-    public ProductNotFoundException(String message) {
+    public FirmNotFoundException(String message) {
         super(message);
     }
 
-    public ProductNotFoundException() {
+    public FirmNotFoundException() {
         super();
     }
 }

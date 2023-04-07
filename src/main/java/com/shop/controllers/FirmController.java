@@ -74,7 +74,7 @@ public class FirmController {
         List<FirmShortDto> firmShortDtos1 = firmTypeService.getShortByCategory("Кружки", page);
         model.addAttribute("productSecond", firmShortDtos1);
 
-        List<FirmShortDto> products = firmService.getProductByDiscount(page);
+        List<FirmShortDto> products = firmService.getFirmByDiscount(page);
         model.addAttribute("productsDiscount", products);
 
         List<ShortBlogDto> blogsLimit = blogService.getBlogsWithLimit(6);
@@ -146,7 +146,7 @@ public class FirmController {
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<FirmShortDto> productsByName = firmService.getProductsByName(name);
+        List<FirmShortDto> productsByName = firmService.getFirmsByName(name);
         model.addAttribute("products", productsByName);
 
         return "product-search";
@@ -169,7 +169,7 @@ public class FirmController {
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<BasketFirmDto> shortProducts = firmService.getProductsForBasketByIds(basket);
+        List<BasketFirmDto> shortProducts = firmService.getFirmsForBasketByIds(basket);
         model.addAttribute("basketProducts", shortProducts);
 
         return "basket";

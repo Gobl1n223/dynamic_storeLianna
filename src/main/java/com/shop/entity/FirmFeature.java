@@ -32,7 +32,7 @@ public class FirmFeature {
     @NotNull
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "productFeature")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "firmFeature")
     @JsonIgnore
     private Set<ValueFirmFeature> valueFirmFeature;
 
