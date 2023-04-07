@@ -39,12 +39,12 @@
     <header th:insert="blocks/constructor-header-none :: header"> </header>
     <!--header area end-->
 
-    <!--product details start-->
+    <!--firm details start-->
     <div class="product_details mt-100 mb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <div class="product-details-tab">
+                    <div class="firm-details-tab">
                         <div id="img1" class="zoomWrapper 2single-zoom">
                             <a href="#">
                                 <img id="zoom" th:src="${productDetail.getPictures().get(0)}" style="height: 600px;">
@@ -108,9 +108,9 @@
             </div>
         </div>
     </div>
-    <!--product details end-->
+    <!--firm details end-->
 
-    <!--product info start-->
+    <!--firm info start-->
     <div class="product_d_info mb-90">
         <div class="container">
             <div class="row">
@@ -184,7 +184,7 @@
                                     </div>
 
                                     <div class="product_review_form">
-                                        <form action="#" th:action="${'/product/' + productDetail.getId()}" th:object="${commentDto}"
+                                        <form action="#" th:action="${'/firm/' + productDetail.getId()}" th:object="${commentDto}"
                                               method="post">
 
 
@@ -214,9 +214,9 @@
             </div>
         </div>
     </div>
-    <!--product info end-->
+    <!--firm info end-->
 
-    <!--product area start-->
+    <!--firm area start-->
     <section class="product_area related_products">
         <div class="container">
             <div class="row">
@@ -228,16 +228,16 @@
             </div>
             <div class="row">
                 <div class="product_carousel product_column4 owl-carousel">
-                    <div class="col-lg-3" th:each="product : ${products}">
+                    <div class="col-lg-3" th:each="firm : ${firms}">
                         <div class="product_items">
-                            <article th:insert="blocks/single-product :: article"> </article>
+                            <article th:insert="blocks/single-firm :: article"> </article>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--product area end-->
+    <!--firm area end-->
 
     <footer th:insert="blocks/footer :: footer"> </footer>
 

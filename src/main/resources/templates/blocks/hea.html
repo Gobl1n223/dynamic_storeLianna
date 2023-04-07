@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://bootstraptema.ru/plugins/2016/bootsnav/bootsnav.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://bootstraptema.ru/plugins/2016/bootsnav/bootsnav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+    /* demo background */
+    body{
+        background: #ffffff;
+        background: -webkit-linear-gradient(to right, #ffffff, #e3e3e3);
+        background: linear-gradient(to right, #ffffff, #e0e0e0);
+    }
+
+    /* demo menu */
+    nav.navbar.bootsnav{
+        border: none;
+        background: none;
+        margin-bottom: 150px;
+    }
+    nav.navbar.bootsnav ul.nav > li{
+        margin-right: 10px;
+    }
+    nav.navbar.bootsnav ul.nav > li:before{
+        content: attr(alt);
+        padding: 15px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #00306c;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+    nav.navbar.bootsnav ul.nav > li:hover:before{
+        transform: scale(1);
+        opacity: 1;
+    }
+    nav.navbar.bootsnav ul.nav > li > a{
+        padding: 15px;
+        margin: 0;
+        color: #00306c;
+        text-transform: uppercase;
+        z-index: 1;
+        transition: all 0.5s ease 0s;
+    }
+    nav.navbar.bootsnav ul.nav > li.dropdown > a{
+        padding: 15px 30px 15px 15px;
+    }
+    nav.navbar.bootsnav ul.nav > li > a:hover,
+    nav.navbar.bootsnav ul.nav > li.on > a{ color: #00306c; }
+    nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+        position: absolute;
+        margin: 0 0 0 7px;
+    }
+    nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+        top: 120%;
+        transition: all 0.8s ease 0s;
+    }
+    nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+        top: 100%;
+    }
+    .dropdown-menu.multi-dropdown{
+        position: absolute;
+        left: -100% !important;
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: none;
+    }
+    @media only screen and (max-width:990px){
+        .dropdown-menu.multi-dropdown{ left: 0 !important; }
+        nav.navbar.bootsnav .navbar-toggle{
+            background: none;
+            color: #00306c;
+        }
+        nav.navbar.bootsnav ul.nav > li{
+            margin-right: 0;
+        }
+        nav.navbar.bootsnav ul.nav > li:before{
+            width: 100%;
+            font-weight: normal;
+            color: #555;
+        }
+        nav.navbar.bootsnav ul.nav > li > a{
+            color: #333 !important;
+            border-top: none;
+        }
+        nav.navbar.bootsnav ul.nav > li > a:hover{
+            color: #333;
+        }
+        nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+    }
+</style>
+<div class="container" style="width: 2000px; height: 200px">
+    <img src="https://patentus.ru/blog/wp-content/uploads/2014/09/rzd-logo-1024x551.jpg" alt="image" style="height: 130px; left: 300px"/>
+    <nav class="navbar navbar-default navbar-mobile bootsnav" style="left: 550px; top:-120px">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                <li alt="ГЛАВНАЯ"><a href="/">Главная</a></li>
+                <li alt="ВСЕ ФИРМЫ"><a href="#">Все фирмы</a></li>
+                <li class="dropdown" alt="КАТЕГОРИИ ФИРМ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категории фирм</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Фундаменты</a></li>
+                        <li><a href="#">Заборы</a></li>
+                        <li><a href="#">Дома</a></li>
+                        <li><a href="#">Пластиковые окна</a></li>
+                        <li><a href="#">Колодцы</a></li>
+                        <li><a href="#">Скважины</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" alt="ТОП ФИРМ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Топ фирм</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Бригадир</a></li>
+                        <li><a href="#">Строиидея</a></li>
+                        <li><a href="#">Ель</a></li>
+                        <li><a href="#">Современный дом</a></li>
+                        <li><a href="#">Новый дом</a></li>
+                    </ul>
+                </li>
+                <li alt="О НАС"><a href="#">О нас</a></li>
+                <li alt="КОНТАКТЫ"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</div>

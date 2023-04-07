@@ -57,7 +57,7 @@
                                             <th class="product_remove">Удалить</th>
                                             <th class="product_thumb">Фото</th>
                                             <th class="product_name">Товар</th>
-                                            <th class="product-price">Цена</th>
+                                            <th class="firm-price">Цена</th>
                                             <th class="product_quantity">Количество</th>
                                             <th class="product_total">Итого</th>
                                         </tr>
@@ -65,33 +65,33 @@
                                     <tbody>
                                     <tr th:each="basketProduct : ${basketProducts}">
                                         <td class="product_remove"><a
-                                                th:onclick="'javascript:removeFullItemFromBasket('+ ${basketProduct.getProductShortDto().getId()} +');'"><i
+                                                th:onclick="'javascript:removeFullItemFromBasket('+ ${basketProduct.getFirmShortDto().getId()} +');'"><i
                                                 class="fa fa-trash-o"></i></a>
                                         </td>
                                         <td class="product_thumb"><a
-                                                th:href="${'/product/' + basketProduct.getProductShortDto().getId()}"><img
-                                                th:src="${basketProduct.getProductShortDto().getPicture()}" alt=""></a>
+                                                th:href="${'/firm/' + basketProduct.getFirmShortDto().getId()}"><img
+                                                th:src="${basketProduct.getFirmShortDto().getPicture()}" alt=""></a>
                                         </td>
                                         <td class="product_name"><a
-                                                th:href="${'/product/' + basketProduct.getProductShortDto().getId()}"
-                                                th:text="${basketProduct.getProductShortDto().getName()}"></a></td>
-                                        <td class="product-price"
-                                            th:text="${basketProduct.getProductShortDto().getPrice()}+ ' ₽'"></td>
+                                                th:href="${'/firm/' + basketProduct.getFirmShortDto().getId()}"
+                                                th:text="${basketProduct.getFirmShortDto().getName()}"></a></td>
+                                        <td class="firm-price"
+                                            th:text="${basketProduct.getFirmShortDto().getPrice()}+ ' ₽'"></td>
                                         <td class="product_quantity">
 
 
                                             <label></label>
                                             <button type="button" class="btn btn-primary"
-                                                    th:onclick="'javascript:minusCount('+ ${basketProduct.getProductShortDto().getId()} + ', ' + ${basketProduct.getProductShortDto().getPrice()} +');'">
+                                                    th:onclick="'javascript:minusCount('+ ${basketProduct.getFirmShortDto().getId()} + ', ' + ${basketProduct.getFirmShortDto().getPrice()} +');'">
                                                 <</button>
-                                            <input min="0" max="100" th:value="${basketProduct.getHowMany()}" th:id="${'count' + basketProduct.getProductShortDto().getId()}"
+                                            <input min="0" max="100" th:value="${basketProduct.getHowMany()}" th:id="${'count' + basketProduct.getFirmShortDto().getId()}"
                                                    type="text">
                                             <button type="button" class="btn btn-primary"
-                                                    th:onclick="'javascript:plusCount('+ ${basketProduct.getProductShortDto().getId()} + ', ' + ${basketProduct.getProductShortDto().getPrice()} +');'">></button>
+                                                    th:onclick="'javascript:plusCount('+ ${basketProduct.getFirmShortDto().getId()} + ', ' + ${basketProduct.getFirmShortDto().getPrice()} +');'">></button>
                                         </td>
                                         <td class="product_total"
-                                            th:id="${'total' + basketProduct.getProductShortDto().getId()}"
-                                            th:text="${basketProduct.getProductShortDto().getPrice() * basketProduct.getHowMany()}+ ' ₽'">
+                                            th:id="${'total' + basketProduct.getFirmShortDto().getId()}"
+                                            th:text="${basketProduct.getFirmShortDto().getPrice() * basketProduct.getHowMany()}+ ' ₽'">
                                         </td>
 
                                     </tr>

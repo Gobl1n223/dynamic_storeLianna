@@ -6,9 +6,9 @@
                       https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
     <changeSet id="1652953076528-10" author="zubchenko">
-        <createTable tableName="product_comment">
+        <createTable tableName="firm_comment">
             <column name="id" type="BIGINT">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_product_comment"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_firm_comment"/>
             </column>
 
             <column name="rating" type="int" defaultValue="5">
@@ -26,7 +26,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="product_id" type="BIGINT">
+            <column name="firm_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -37,11 +37,11 @@
                 incrementBy="1"
                 schemaName="public"
                 startWith="100"
-                tableName="product_comment"/>
+                tableName="firm_comment"/>
 
-        <addForeignKeyConstraint baseColumnNames="product_id" baseTableName="product_comment"
-                                 constraintName="FK_PRODUCT_COMMENT_ON_PRODUCT" referencedColumnNames="id"
-                                 referencedTableName="product"/>
+        <addForeignKeyConstraint baseColumnNames="firm_id" baseTableName="firm_comment"
+                                 constraintName="FK_FIRM_COMMENT_ON_FIRM" referencedColumnNames="id"
+                                 referencedTableName="firm"/>
 
     </changeSet>
 

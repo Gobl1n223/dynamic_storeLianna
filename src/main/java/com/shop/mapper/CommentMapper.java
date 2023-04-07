@@ -1,10 +1,10 @@
 package com.shop.mapper;
 
 import com.shop.dto.comment.BlogCommentDto;
-import com.shop.dto.comment.ProductCommentDto;
-import com.shop.dto.comment.ProductReviewCommentDto;
+import com.shop.dto.comment.FirmCommentDto;
+import com.shop.dto.comment.FirmReviewCommentDto;
 import com.shop.entity.BlogComment;
-import com.shop.entity.ProductComment;
+import com.shop.entity.FirmComment;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -18,13 +18,13 @@ public interface CommentMapper {
     BlogCommentDto toDto(BlogComment comment);
 
     @Mapping(target = "date", expression = "java(changeDateToString(comment.getDate()))")
-    ProductCommentDto toDto(ProductComment comment);
+    FirmCommentDto toDto(FirmComment comment);
 
     @Mapping(target = "date", expression = "java(setDate())")
     @Mapping(source = "id", target = "id")
-    @Mapping(source = "productReviewCommentDto.comment", target = "text")
-    @Mapping(source = "productReviewCommentDto.name", target = "author")
-    ProductComment toEntity(ProductReviewCommentDto productReviewCommentDto, Long id);
+    @Mapping(source = "firmReviewCommentDto.comment", target = "text")
+    @Mapping(source = "firmReviewCommentDto.name", target = "author")
+    FirmComment toEntity(FirmReviewCommentDto firmReviewCommentDto, Long id);
 
     default String changeDateToString(LocalDateTime date) {
 

@@ -9,7 +9,7 @@ import com.shop.entity.BlogCategory;
 import com.shop.service.BlogCategoryService;
 import com.shop.service.BlogCommentService;
 import com.shop.service.BlogService;
-import com.shop.service.ProductTypeService;
+import com.shop.service.FirmTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -31,7 +30,7 @@ import java.util.stream.Collectors;
 
 public class BlogController {
 
-    private final ProductTypeService productTypeService;
+    private final FirmTypeService firmTypeService;
     private final BlogService blogService;
     private final BlogCommentService blogCommentService;
     private final BlogCategoryService blogCategoryService;
@@ -39,12 +38,12 @@ public class BlogController {
 
     @Autowired
     public BlogController(
-            ProductTypeService productTypeService,
+            FirmTypeService firmTypeService,
             BlogService blogService,
             BlogCommentService blogCommentService,
             BlogCategoryService blogCategoryService
     ) {
-        this.productTypeService = productTypeService;
+        this.firmTypeService = firmTypeService;
         this.blogService = blogService;
         this.blogCommentService = blogCommentService;
         this.blogCategoryService = blogCategoryService;
@@ -54,7 +53,7 @@ public class BlogController {
     @GetMapping("blog/{id}")
     public String getBlogDetails(Model model, @PathVariable Long id) {
 
-        List<CategoryDto> categories = productTypeService.getCategories();
+        List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
         List<BlogCategory> blogCategories = blogCategoryService.getAllCategories();
@@ -84,7 +83,7 @@ public class BlogController {
     @GetMapping("blogs")
     public String getBlogDetails1(Model model, @RequestParam(value = "p", required = false, defaultValue = "1") Integer p) {
 
-        List<CategoryDto> categories = productTypeService.getCategories();
+        List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
         List<BlogCategory> blogCategories = blogCategoryService.getAllCategories();
@@ -123,7 +122,7 @@ public class BlogController {
     ) {
         model.addAttribute("search", name);
 
-        List<CategoryDto> categories = productTypeService.getCategories();
+        List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
         List<BlogCategory> blogCategories = blogCategoryService.getAllCategories();
@@ -154,7 +153,7 @@ public class BlogController {
     ) {
         model.addAttribute("search", category);
 
-        List<CategoryDto> categories = productTypeService.getCategories();
+        List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
         List<BlogCategory> blogCategories = blogCategoryService.getAllCategories();

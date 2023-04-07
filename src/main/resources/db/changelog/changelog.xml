@@ -6,20 +6,20 @@
                       https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
 
-    <include file="001_19-02-22-product_type.xml" relativeToChangelogFile="true"/>
-    <include file="002_19-02-22-product_feature.xml" relativeToChangelogFile="true"/>
-    <include file="003_19-02-22-product.xml" relativeToChangelogFile="true"/>
-    <include file="004_19-02-22-value_product_feature.xml" relativeToChangelogFile="true"/>
-    <include file="005_01-06-22-product_picture.xml" relativeToChangelogFile="true"/>
+    <include file="001_19-02-22-firm_type.xml" relativeToChangelogFile="true"/>
+    <include file="002_19-02-22-firm_feature.xml" relativeToChangelogFile="true"/>
+    <include file="003_19-02-22-firm.xml" relativeToChangelogFile="true"/>
+    <include file="004_19-02-22-value_firm_feature.xml" relativeToChangelogFile="true"/>
+    <include file="005_01-06-22-firm_picture.xml" relativeToChangelogFile="true"/>
     <include file="006_06-06-22-blog-category.xml" relativeToChangelogFile="true"/>
     <include file="007_02-06-22-blog.xml" relativeToChangelogFile="true"/>
     <include file="008_02-06-22-blog_details.xml" relativeToChangelogFile="true"/>
     <include file="009_02-06-22-blog_comment.xml" relativeToChangelogFile="true"/>
     <include file="010_02-06-22-product_comment.xml" relativeToChangelogFile="true"/>
-    <include file="_01_fill_db_product_type.xml" relativeToChangelogFile="true"/>
-    <include file="_02_fill_db_product_feature.xml" relativeToChangelogFile="true"/>
-    <include file="_03_fill_db_product.xml" relativeToChangelogFile="true"/>
-    <include file="_04_fill_db_value_product_feature.xml" relativeToChangelogFile="true"/>
+    <include file="_01_fill_db_firm_type.xml" relativeToChangelogFile="true"/>
+    <include file="_02_fill_db_firm_feature.xml" relativeToChangelogFile="true"/>
+    <include file="_03_fill_db_firm.xml" relativeToChangelogFile="true"/>
+    <include file="_04_fill_db_value_firm_feature.xml" relativeToChangelogFile="true"/>
     <include file="_06_fill_db_blog_category.xml" relativeToChangelogFile="true"/>
     <include file="_07_fill_db_blog.xml" relativeToChangelogFile="true"/>
     <include file="_10_fill_db_blog_details.xml" relativeToChangelogFile="true"/>

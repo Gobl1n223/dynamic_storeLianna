@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1652953076529-1" author="zubchenko">
+
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Бутылки"/>
+            <column name="picture" value="https://static.tildacdn.com/tild3331-3364-4461-b662-623032336637/220EE274-EF8A-4629-8.jpeg"/>
+        </insert>
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Худи"/>
+            <column name="picture" value="https://static.tildacdn.com/tild6632-6532-4237-a235-333532366637/photo.png"/>
+
+        </insert>
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Кружки"/>
+            <column name="picture" value="https://static.tildacdn.com/tild6134-6462-4837-b965-336137393335/A6ECBFFC-42EE-4B57-A.jpeg"/>
+        </insert>
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Футболки"/>
+            <column name="picture" value="https://static.tildacdn.com/tild6137-3065-4064-b936-376531393331/photo.jpg"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

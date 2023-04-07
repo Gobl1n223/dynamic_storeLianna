@@ -1,14 +1,14 @@
 <article class="single_product">
     <figure>
         <div class="product_thumb">
-            <a class="primary_img" th:href="${'/product/' + product.getId()}"><img
-                    th:src="${product.getPicture()}" alt=""></a>
-            <div class="label_product" th:if="${product.getDiscountPercent() != null}">
-                <span class="label_sale" th:text="'-' + ${product.getDiscountPercent()} + '%'"></span>
+            <a class="primary_img" th:href="${'/firm/' + firm.getId()}"><img
+                    th:src="${firm.getPicture()}" alt=""></a>
+            <div class="label_product" th:if="${firm.getDiscountPercent() != null}">
+                <span class="label_sale" th:text="'-' + ${firm.getDiscountPercent()} + '%'"></span>
             </div>
             <div class="action_links">
                 <ul>
-                    <li class="add_to_cart"><a th:onclick="'javascript:addItemToBasket('+ ${product.getId()} +');'" title="Добавить в корзину"><i
+                    <li class="add_to_cart"><a th:onclick="'javascript:addItemToBasket('+ ${firm.getId()} +');'" title="Добавить в корзину"><i
                             class="icon-shopping-bag" id="icon-shopping-bag"></i></a></li>
                 </ul>
             </div>
@@ -17,28 +17,28 @@
             <div class="product_rating">
                 <ul>
 
-                    <li th:if="${product.getRating < 0.5}"><a href="#"><i class="icon-star"></i></a></li>
-                    <li th:if="${product.getRating >= 0.5}"><a href="#"><i class="icon-star2"></i></a></li>
+                    <li th:if="${firm.getRating < 0.5}"><a href="#"><i class="icon-star"></i></a></li>
+                    <li th:if="${firm.getRating >= 0.5}"><a href="#"><i class="icon-star2"></i></a></li>
 
-                    <li th:if="${product.getRating < 1.5}"><a href="#"><i class="icon-star"></i></a></li>
-                    <li th:if="${product.getRating >= 1.5}"><a href="#"><i class="icon-star2"></i></a></li>
+                    <li th:if="${firm.getRating < 1.5}"><a href="#"><i class="icon-star"></i></a></li>
+                    <li th:if="${firm.getRating >= 1.5}"><a href="#"><i class="icon-star2"></i></a></li>
 
-                    <li th:if="${product.getRating < 2.5}"><a href="#"><i class="icon-star"></i></a></li>
-                    <li th:if="${product.getRating >= 2.5}"><a href="#"><i class="icon-star2"></i></a></li>
+                    <li th:if="${firm.getRating < 2.5}"><a href="#"><i class="icon-star"></i></a></li>
+                    <li th:if="${firm.getRating >= 2.5}"><a href="#"><i class="icon-star2"></i></a></li>
 
-                    <li th:if="${product.getRating < 3.5}"><a href="#"><i class="icon-star"></i></a></li>
-                    <li th:if="${product.getRating >= 3.5}"><a href="#"><i class="icon-star2"></i></a></li>
+                    <li th:if="${firm.getRating < 3.5}"><a href="#"><i class="icon-star"></i></a></li>
+                    <li th:if="${firm.getRating >= 3.5}"><a href="#"><i class="icon-star2"></i></a></li>
 
-                    <li th:if="${product.getRating < 4.5}"><a href="#"><i class="icon-star"></i></a></li>
-                    <li th:if="${product.getRating >= 4.5}"><a href="#"><i class="icon-star2"></i></a></li>
+                    <li th:if="${firm.getRating < 4.5}"><a href="#"><i class="icon-star"></i></a></li>
+                    <li th:if="${firm.getRating >= 4.5}"><a href="#"><i class="icon-star2"></i></a></li>
                 </ul>
             </div>
             <h4
-                    class="product_name"><a th:href="${'/product/' + product.getId()}" th:text="${product.getName()}"></a>
+                    class="product_name"><a th:href="${'/firm/' + firm.getId()}" th:text="${firm.getName()}"></a>
             </h4>
             <div class="price_box">
-                <span class="current_price" th:text="${product.getPrice()}+ ' ₽'"></span>
-                <span class="old_price" th:if="${product.getPriceWithoutDiscount() != null}" th:text="${product.getPriceWithoutDiscount()}+ ' ₽'"></span>
+                <span class="current_price" th:text="${firm.getPrice()}+ ' ₽'"></span>
+                <span class="old_price" th:if="${firm.getPriceWithoutDiscount() != null}" th:text="${firm.getPriceWithoutDiscount()}+ ' ₽'"></span>
             </div>
         </figcaption>
     </figure>

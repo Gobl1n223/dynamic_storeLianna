@@ -1,10 +1,9 @@
 package com.shop.repository;
 
-import com.shop.entity.FirmType;
+import com.shop.entity.FirmComment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductTypeRepository extends JpaRepository<FirmType, Long> {
-
+public interface FirmCommentRepository extends JpaRepository<FirmComment, Long> {
 }

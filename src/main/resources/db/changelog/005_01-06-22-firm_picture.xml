@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1652953076528-5" author="zubchenko">
+
+        <createTable tableName="firm_picture">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_firm_picture"/>
+            </column>
+
+            <column name="picture" type="VARCHAR"/>
+
+            <column name="firm_id" type="BIGINT"/>
+
+        </createTable>
+
+        <addAutoIncrement
+                columnDataType="BIGINT"
+                columnName="id"
+                incrementBy="1"
+                schemaName="public"
+                startWith="100"
+                tableName="firm_picture"/>
+
+        <addForeignKeyConstraint baseColumnNames="firm_id" baseTableName="firm_picture"
+                                 constraintName="FK_FIRM_PICTURE_ON_FIRM" referencedColumnNames="id"
+                                 referencedTableName="firm"/>
+
+    </changeSet>
+
+</databaseChangeLog>

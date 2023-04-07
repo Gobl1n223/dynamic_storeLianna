@@ -39,17 +39,17 @@
     <header th:insert="blocks/constructor-header-none :: header"> </header>
     <!--header area end-->
 
-    <!--product details start-->
+    <!--firm details start-->
     <div class="product_details mt-100 mb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <div class="product-details-tab">
+                    <div class="firm-details-tab">
                         <div id="img-1" class="zoomWrapper single-zoom">
 
                         </div>
                         <div class="single-zoom-thumb">
-                            <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+                            <ul class="s-tab-zoom owl-carousel single-firm-active" id="gallery_01">
 
                             </ul>
                         </div>
@@ -65,9 +65,9 @@
             </div>
         </div>
     </div>
-    <!--product details end-->
+    <!--firm details end-->
 
-    <!--product info start-->
+    <!--firm info start-->
     <div class="product_d_info mb-90">
         <div class="container">
             <div class="row">
@@ -114,7 +114,7 @@
                                                 <tr th:each="productt : ${productsComparing}">
 
 
-                                                    <td th:each="product : ${productsComparing}" th:text="${product.getFeatures().get('Видеопамять').getValue()}"></td>
+                                                    <td th:each="firm : ${productsComparing}" th:text="${firm.getFeatures().get('Видеопамять').getValue()}"></td>
                                                     <td class="first_child">Видеопамять</td>
                                                 </tr>
                                             </tbody>
@@ -139,9 +139,9 @@
             </div>
         </div>
     </div>
-    <!--product info end-->
+    <!--firm info end-->
 
-    <!--product area start-->
+    <!--firm area start-->
     <section class="product_area related_products">
         <div class="container">
             <div class="row">
@@ -157,7 +157,7 @@
             </div>
         </div>
     </section>
-    <!--product area end-->
+    <!--firm area end-->
 
     <footer th:insert="blocks/footer :: footer"> </footer>
 
