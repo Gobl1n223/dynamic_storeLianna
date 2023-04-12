@@ -50,18 +50,5 @@ public class FirmTypeServiceImpl implements FirmTypeService {
         return categoryDtos;
     }
 
-    @Override
-    public List<FirmShortDto> getShortByCategory(String category, Pageable page) {
-        List<FirmShortDto> firmShortDtos = productRepository.findFirmsByCategory(category, page).stream()
-                .map(productMapper::toShortDto)
-                .collect(toList());
-
-        if (firmShortDtos.isEmpty())
-            throw new CategoryNotFoundException("категория пуста или не существует");
-
-        return firmShortDtos;
-
-    }
-
 
 }

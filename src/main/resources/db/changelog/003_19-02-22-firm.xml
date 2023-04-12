@@ -11,11 +11,11 @@
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_firm"/>
             </column>
             <column name="name" type="VARCHAR(255)"/>
-            <column name="price" type="DECIMAL"/>
-            <column name="price_without_discount" type="DECIMAL">
+            <column name="address" type="VARCHAR(255)"/>
+            <column name="phoneNumber" type="VARCHAR(255)">
                 <constraints nullable="true"/>
             </column>
-            <column name="amount" type="BIGINT" defaultValue="0">
+            <column name="type" type="VARCHAR(255)" defaultValue="0">
                 <constraints nullable="false"/>
             </column>
             <column name="picture" type="VARCHAR"/>

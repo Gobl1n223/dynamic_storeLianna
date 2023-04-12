@@ -32,9 +32,6 @@ public class FirmType {
     private String picture;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "firmType")
-    private Set<Firm> firms;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "firmType")
     @JsonIgnore
     private Set<FirmFeature> firmFeatures;
 

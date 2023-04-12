@@ -10,6 +10,5 @@ public interface FirmTypeService {
 
     List<CategoryDto> getCategories();
 
-    List<FirmShortDto> getShortByCategory(String category, Pageable page);
 
 }

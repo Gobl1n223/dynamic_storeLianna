@@ -39,11 +39,11 @@ public class Firm {
     private String name;
 
     @NotNull
-    private BigDecimal price;
+    private String address;
 
-    private BigDecimal priceWithoutDiscount;
+    private String phonenumber;
 
-    private Long amount;
+    private String type;
 
     private String description;
 
@@ -53,18 +53,14 @@ public class Firm {
     @Min(1)
     private Double rating;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
-    private FirmType firmType;
-
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
     private Set<ValueFirmFeature> valueFirmFeature;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
-
     private Set<FirmPicture> firmPictures;
+
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
     private Set<FirmComment> firmComment;

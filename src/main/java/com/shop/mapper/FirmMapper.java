@@ -22,12 +22,9 @@ import static java.util.stream.Collectors.toList;
 public interface FirmMapper {
 
     @Mapping(source = "firm.picture", target = "picture", defaultExpression = "java(\"/assets/img/firm/no-image.jpg\")")
-    @Mapping(target = "discountPercent", expression = "java(calculatePercent(firm))")
     FirmShortDto toShortDto(Firm firm);
 
     @Mapping(source = "firm.picture", target = "picture", defaultExpression = "java(\"/assets/img/firm/no-image.jpg\")")
-    @Mapping(target = "discountPercent", expression = "java(calculatePercent(firm))")
-    @Mapping(source = "firm.firmType.nameCategory", target = "category")
     @Mapping(target = "pictures", expression = "java(rebuildfirmPictures(firm))")
     @Mapping(source = "firmComment", target = "firmComment")
     @Mapping(source = "firm.rating", target = "rating", defaultValue = "0.0")
@@ -37,18 +34,6 @@ public interface FirmMapper {
     BasketFirmDto toBasketDto(FirmShortDto firmShortDto, Integer howMany);
 
 
-    default Integer calculatePercent(Firm firm) {
-        if (isNull(firm.getPriceWithoutDiscount()) || isNull(firm.getPrice()))
-            return null;
-
-        int percent;
-        BigDecimal price = firm.getPrice();
-        BigDecimal priceWithoutDiscount = firm.getPriceWithoutDiscount();
-        percent = priceWithoutDiscount.subtract(price).divide(priceWithoutDiscount, MathContext.DECIMAL32)
-                .multiply(ONE_HUNDRED).intValue();
-
-        return percent;
-    }
 
 
     default List<String> rebuildfirmPictures(Firm firm) {

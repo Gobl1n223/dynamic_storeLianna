@@ -13,11 +13,9 @@ import com.shop.mapper.FirmMapper;
 import com.shop.mapper.ValueFirmFeatureMapper;
 import com.shop.repository.FirmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -44,38 +42,12 @@ public class FirmServiceImpl implements FirmService {
         this.commentMapper = commentMapper;
     }
 
-    @Override
-    public FirmDto getById(Long id) {
-        Firm firm = firmRepository.findFirmById(id).orElseThrow(FirmNotFoundException::new);
 
-
-        List<FirmCommentDto> sortedComments = firm.getFirmComment().stream().sorted(Comparator.comparing(FirmComment::getDate)).map(commentMapper::toDto).collect(toList());
-
-        List<ValueFirmFeatureDto> firmFeatures = firm.getValueFirmFeature().stream().map(valueFirmFeatureMapper::toDto).sorted(Comparator.comparing(ValueFirmFeatureDto::getFeatureName)).collect(toList());
-
-
-        return firmMapper.toDto(firm, firmFeatures, sortedComments);
+    public List<Firm> getAll(){
+        return firmRepository.findAll();
     }
 
 
-    @Override
-    public List<FirmShortDto> getFirmsByName(String name) {
-
-        List<Firm> firms = firmRepository.findByName(name);
-
-
-        return firms.stream().map(firmMapper::toShortDto).collect(toList());
-    }
-
-
-    @Override
-    public List<FirmShortDto> getFirmByDiscount(Pageable page) {
-        List<Firm> firms = firmRepository.findFirmsByDiscount(page);
-
-        if (firms.isEmpty()) throw new FirmNotFoundException("Продукт со скидкой не найден");
-
-        return firms.stream().map(firmMapper::toShortDto).collect(toList());
-    }
 
 
     @Override

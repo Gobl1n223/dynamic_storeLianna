@@ -6,6 +6,7 @@ import com.shop.dto.FirmDto;
 import com.shop.dto.FirmShortDto;
 import com.shop.dto.ShortBlogDto;
 import com.shop.dto.comment.FirmReviewCommentDto;
+import com.shop.entity.Firm;
 import com.shop.service.BlogService;
 import com.shop.service.FirmCommentService;
 import com.shop.service.FirmService;
@@ -63,38 +64,20 @@ public class FirmController {
 
     @GetMapping
     public String getProductsByCategory(@RequestParam(required = false,defaultValue = "0") int p, Model model) {
-        Pageable page = PageRequest.of(p,8);
 
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
-
-        List<FirmShortDto> firmShortDtos0 = firmTypeService.getShortByCategory("Футболки", page);
-        model.addAttribute("productFirst", firmShortDtos0);
-
-        List<FirmShortDto> firmShortDtos1 = firmTypeService.getShortByCategory("Кружки", page);
-        model.addAttribute("productSecond", firmShortDtos1);
-
-        List<FirmShortDto> products = firmService.getFirmByDiscount(page);
-        model.addAttribute("productsDiscount", products);
-
-        List<ShortBlogDto> blogsLimit = blogService.getBlogsWithLimit(6);
-        model.addAttribute("blogsLimit", blogsLimit);
+        List<Firm> firms = firmService.getAll();
+        model.addAttribute("firms", firms);
 
         return "index";
     }
 
 
-    @GetMapping("product/{id}")
+    @GetMapping("firm/{id}")
     public String getProductById(@PathVariable Long id, Model model) {
-        FirmDto firmDto = firmService.getById(id);
-        model.addAttribute("productDetail", firmDto);
 
         Pageable page = PageRequest.of(0,8);
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
-
-        List<FirmShortDto> similarProducts = firmTypeService.getShortByCategory(firmDto.getCategory(), page);
-        model.addAttribute("products", similarProducts);
 
         model.addAttribute("commentDto", new FirmReviewCommentDto());
 
@@ -103,15 +86,12 @@ public class FirmController {
 
     @GetMapping("product/product/{id}")
     public String getProductById1(@PathVariable Long id, Model model) {
-        FirmDto firmDto = firmService.getById(id);
-        model.addAttribute("productDetail", firmDto);
+
 
         Pageable page = PageRequest.of(0,8);
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<FirmShortDto> similarProducts = firmTypeService.getShortByCategory(firmDto.getCategory(), page);
-        model.addAttribute("products", similarProducts);
 
         model.addAttribute("commentDto", new FirmReviewCommentDto());
 
@@ -134,8 +114,6 @@ public class FirmController {
         model.addAttribute("categories", categories);
 
 
-        List<FirmShortDto> products = firmTypeService.getShortByCategory(category, page);
-        model.addAttribute("products", products);
 
         return "product-search";
     }
@@ -146,8 +124,6 @@ public class FirmController {
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<FirmShortDto> productsByName = firmService.getFirmsByName(name);
-        model.addAttribute("products", productsByName);
 
         return "product-search";
     }
@@ -169,8 +145,6 @@ public class FirmController {
         List<CategoryDto> categories = firmTypeService.getCategories();
         model.addAttribute("categories", categories);
 
-        List<BasketFirmDto> shortProducts = firmService.getFirmsForBasketByIds(basket);
-        model.addAttribute("basketProducts", shortProducts);
 
         return "basket";
     }
