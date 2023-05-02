@@ -18,7 +18,7 @@
     <include file="010_02-06-22-product_comment.xml" relativeToChangelogFile="true"/>
     <include file="_01_fill_db_firm_type.xml" relativeToChangelogFile="true"/>
     <include file="_02_fill_db_firm_feature.xml" relativeToChangelogFile="true"/>
-   <!-- <include file="_03_fill_db_firm.xml" relativeToChangelogFile="true"/>-->
+    <include file="_03_fill_db_firm.xml" relativeToChangelogFile="true"/>
     <include file="_04_fill_db_value_firm_feature.xml" relativeToChangelogFile="true"/>
     <include file="_06_fill_db_blog_category.xml" relativeToChangelogFile="true"/>
     <include file="_07_fill_db_blog.xml" relativeToChangelogFile="true"/>
