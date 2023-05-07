@@ -71,4 +71,9 @@ public class FirmServiceImpl implements FirmService {
 
         return firmShortDtoList.stream().map(p -> firmMapper.toBasketDto(p, resultMap.get(p.getId()).intValue())).collect(toList());
     }
+
+    @Override
+    public Firm getById(Long id) {
+        return firmRepository.getById(id);
+    }
 }

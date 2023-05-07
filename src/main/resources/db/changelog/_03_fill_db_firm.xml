@@ -14,7 +14,8 @@
             <column name="address" value="Революционная ул., 130, Самара"/>
             <column name="phonenumber" value ="+7 (846) 201-03-31"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=0e8f5b704a7696cea2e88bba61ca990677fd6818-7942262-images-thumbs&amp;n=13"/>
-            <column name="type" value="Потолки"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>
             <column name="description" value="Наша компания занимается установкой натяжных потолков в самаре. Специалисты нашей компании выполняют руботу по монтажу потолков любой сложности и конфигурации. Все работы ведутся строго с серцифицированными материалами."/>
             <column name="rating" value="4.6"/>
         </insert>
@@ -26,7 +27,8 @@
             <column name="address" value="ул. Авроры, 63, Самара"/>
             <column name="phonenumber" value ="8 (800) 700-12-46"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=a4e94a657e325637021dbeb553e580d944290c9d-7755608-images-thumbs&amp;n=13"/>
-            <column name="type" value="Производство"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
             <column name="description" value="Компания Atlas Copco занимается производством и продажей компрессоров дизельных передвижных., сдает в аренду и обслуживает оборудование."/>
             <column name="rating" value="4.3"/>
         </insert>
@@ -38,7 +40,8 @@
             <column name="address" value="г. Самара, ул. Мичурина 21 Б, офис 9"/>
             <column name="phonenumber" value ="8 (939) 718-18-88"/>
             <column name="picture" value="https://izmddt.my1.ru/redsait/515dbb36b47e406383c7109ac6622864.jpg"/>
-            <column name="type" value="Дома"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
             <column name="description" value="За 13 лет работы на строительном рынке нами реализовано более 140 проектов. «ЭкоДом» – это четкий производственный процесс, сплоченный коллектив, высококвалифицированные специалисты."/>
             <column name="rating" value="4.1"/>
         </insert>
@@ -50,7 +53,8 @@
             <column name="address" value="г.Москва, ул. Баррикадная, д.19, стр.1"/>
             <column name="phonenumber" value ="+7 (495) 5059733"/>
             <column name="picture" value="https://erzrf.ru/erz-rest/api/v1/document?id=16666682001&amp;type=LOGO&amp;nocache=1681272334666"/>
-            <column name="type" value="Фундаменты"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Фундаменты')"/>
             <column name="description" value="Мы создаем передовые технологические сервисы и продукты, позволяющие нам находить инновационные решения во всех сферах недвижимости. Наша миссия — изменить повседневность, создав более комфортные, безопасные и экологичные условия для жизни."/>
             <column name="rating" value="4.9"/>
         </insert>
@@ -62,7 +66,8 @@
             <column name="address" value="Невская ул., 3, Самара"/>
             <column name="phonenumber" value ="+7 (846) 276-41-21"/>
             <column name="picture" value="https://pbs.twimg.com/media/DYbTtMYX4AAqjid.jpg:large"/>
-            <column name="type" value="Дома"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
             <column name="description" value="Компания производит проектные работы самого различного уровня сложности
 •разработка и подготовка документации по градостроительству,
 •проектирование многоэтажных жилых домов и комплексное проектирование административных зданий и сооружений,
@@ -78,7 +83,8 @@
             <column name="address" value="Партизанская ул., 19, Самара"/>
             <column name="phonenumber" value ="+7 (927) 007-74-24"/>
             <column name="picture" value="https://poisk-firm.ru/storage/employer/logo/0a/b4/0a/3b3143f830a9c25d5885c552cc.jpg"/>
-            <column name="type" value="Пластиковые окна"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Пластиковые окна')"/>
             <column name="description" value="Все виды ремонтно-отделочных работ под ключ!"/>
             <column name="rating" value="4.7"/>
         </insert>
@@ -90,7 +96,8 @@
             <column name="address" value="Московское шоссе, 16-й километр, 1В, стр. 2, Самара"/>
             <column name="phonenumber" value ="+7 (927) 725-13-45"/>
             <column name="picture" value="https://icomms.ru/images/firms/1134911/full_e857027407c352195d6e4f2cb032f7a1.jpg"/>
-            <column name="type" value="Колодцы"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Колодцы')"/>
             <column name="description" value="Построим на Вашем участке без предоплаты за 2 мес. и 16 500 руб/кв.м.
 «Под ключ» (с отделкой и коммуникациями)
 Строим загородные дома по умной технологии в России с 2011 года.
@@ -112,7 +119,8 @@
             <column name="address" value="просп. Карла Маркса, 192, Самара"/>
             <column name="phonenumber" value ="+7 (846) 922-99-19"/>
             <column name="picture" value="https://joblenobl.ru/images/стройка.jpg"/>
-            <column name="type" value="Фундаменты"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Фундаменты')"/>
             <column name="description" value="Промышленное строительство - быстровозводимые здания, модульные здания. Комплексная реконструкция зданий и сооружений любого уровня сложности."/>
             <column name="rating" value="4.9"/>
         </insert>
@@ -124,7 +132,8 @@
             <column name="address" value="15, 9-й квартал, Самара"/>
             <column name="phonenumber" value ="+7 (846) 212-99-47"/>
             <column name="picture" value="https://s.rbk.ru/v1_companies_s3/resized/1200xH/media/trademarks/9e590041-9345-4066-be6e-403b94118f9e.jpg"/>
-            <column name="type" value="Производство"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
             <column name="description" value="ООО «СТРОЙИНВЕСТ» специализируется на производстве и поставках железобетонных изделий для мостового и дорожного строительства. На рынке уже более 26 лет. В ассортименте представлены железобетонные водопропускные трубы, изделия для водоотведения и водосброса, дорожные плиты, мостовые сваи, ЖБИ для устройства гофрированных труб, звенья прямоугольных и круглых труб всех типов и размеров, а также комплектующих к ним."/>
             <column name="rating" value="4.9"/>
         </insert>
@@ -136,7 +145,8 @@
             <column name="address" value="ул. Яблочкина, 12, Челябинск"/>
             <column name="phonenumber" value ="+7 (351) 734-99-12"/>
             <column name="picture" value="http://images.mirstroek.ru/images/users_logos/big/44797.jpeg"/>
-            <column name="type" value="Колодцы"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Колодцы')"/>
             <column name="description" value="Фирма «Техзащита» комплексно выполняет поставленные задачи в области строительства, реконструкции и ремонта объектов; инженерно-технических средств защиты, безопасности и охраны, слаботочных систем и технической автоматики.
 В настоящее время мы готовы предложить своим Клиентам следующие услуги:
 производство и монтаж технических средств защиты;
@@ -154,7 +164,8 @@
             <column name="address" value="ул. Гагарина, 46, Самара"/>
             <column name="phonenumber" value ="+7 (846) 205-33-25"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=f2ecda6eeb179fb905745c553dc5334a700e6313-7975524-images-thumbs&amp;n=13"/>
-            <column name="type" value="Дома"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
             <column name="description" value="Компания предоставляет полный комплекс услуг монтажа натяжных потолков, а также встраиваемого оборудования. Широкий выбор фактур и оттенков плёнки. Выполнение заказов любой сложности с гарантией качества. Гибкость ценовой политики.
 Сотрудничество, как с лицами, занимающимися продажей и установкой натяжных потолков, так и с организациями."/>
             <column name="rating" value="4.9"/>
@@ -167,7 +178,8 @@
             <column name="address" value="Ташкентская ул., 169, Самара"/>
             <column name="phonenumber" value ="+7 (846) 267-17-17"/>
             <column name="picture" value="https://poisk-firm.ru/storage/employer/logo/91/aa/b1/fb6ce6db4199083f4a60816b4d.jpg"/>
-            <column name="type" value="Производство"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
             <column name="description" value="Сферы деятельности ООО Эклипс-Самара:
 - строительство, ремонт, восстановление конструкций
 - гидроизоляционные материалы и работы
@@ -186,7 +198,8 @@
             <column name="address" value="Ташкентская ул., 169, Самара"/>
             <column name="phonenumber" value ="+7 (927) 606-82-14"/>
             <column name="picture" value="https://11.img.avito.st/image/1/umRQGba_Fo0mt4SFKG-AJqW6EIfuehkf7LoUi-i8FI3k_A"/>
-            <column name="type" value="Потолки"/>
+            <column name="firm_type_id"
+                    valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>
             <column name="description" value="Наша компания занимается установкой и ремонтом натяжных потолков. Мы используем только качественные и проверенные материалы. Все наши работники мастера своего дела. Компетентные и вежливые менеджеры ответят на все Ваши вопросы. На выполненные работы предоставляем гарантию."/>
             <column name="rating" value="4.9"/>
         </insert>

@@ -27,6 +27,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 
@@ -62,6 +63,13 @@ public class FirmController {
         return "blocks/hea";
     }
 
+    @GetMapping("/single-firm")
+    public String getSingleFirm() {
+
+
+        return "single-firm";
+    }
+
     @GetMapping
     public String getProductsByCategory(@RequestParam(required = false,defaultValue = "0") int p, Model model) {
 
@@ -73,15 +81,12 @@ public class FirmController {
 
 
     @GetMapping("firm/{id}")
-    public String getProductById(@PathVariable Long id, Model model) {
+    public String getFirmById(@PathVariable Long id, Model model) {
 
-        Pageable page = PageRequest.of(0,8);
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
+        Firm firm = firmService.getById(id);
+        model.addAttribute("firm", firm);
 
-        model.addAttribute("commentDto", new FirmReviewCommentDto());
-
-        return "product-details";
+        return "firm-details";
     }
 
     @GetMapping("product/product/{id}")
@@ -107,15 +112,15 @@ public class FirmController {
     }
 
 
-    @GetMapping("category/{category}")
-    public String getProductsByCategory(Model model, @NotNull @PathVariable String category) {
-        Pageable page = PageRequest.of(0,8);
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
+    @GetMapping("category/{categoryId}")
+    public String getProductsByCategory(Model model, @NotNull @PathVariable Long categoryId) {
 
+        List<Firm> firms = firmService.getAll().stream().filter(fi -> categoryId.equals(fi.getFirm_type_id()))
+                .collect(Collectors.toList());
 
+        model.addAttribute("firms", firms);
 
-        return "product-search";
+        return "index";
     }
 
 

@@ -11,14 +11,14 @@
                 schemaName="public"
                 tableName="firm_type">
 
-            <column name="name_category" value="Бутылки"/>
+            <column name="name_category" value="Потолки"/>
             <column name="picture" value="https://static.tildacdn.com/tild3331-3364-4461-b662-623032336637/220EE274-EF8A-4629-8.jpeg"/>
         </insert>
         <insert
                 schemaName="public"
                 tableName="firm_type">
 
-            <column name="name_category" value="Худи"/>
+            <column name="name_category" value="Производство"/>
             <column name="picture" value="https://static.tildacdn.com/tild6632-6532-4237-a235-333532366637/photo.png"/>
 
         </insert>
@@ -26,14 +26,28 @@
                 schemaName="public"
                 tableName="firm_type">
 
-            <column name="name_category" value="Кружки"/>
+            <column name="name_category" value="Дома"/>
             <column name="picture" value="https://static.tildacdn.com/tild6134-6462-4837-b965-336137393335/A6ECBFFC-42EE-4B57-A.jpeg"/>
         </insert>
         <insert
                 schemaName="public"
                 tableName="firm_type">
 
-            <column name="name_category" value="Футболки"/>
+            <column name="name_category" value="Фундаменты"/>
+            <column name="picture" value="https://static.tildacdn.com/tild6137-3065-4064-b936-376531393331/photo.jpg"/>
+        </insert>
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Пластиковые окна"/>
+            <column name="picture" value="https://static.tildacdn.com/tild6137-3065-4064-b936-376531393331/photo.jpg"/>
+        </insert>
+        <insert
+                schemaName="public"
+                tableName="firm_type">
+
+            <column name="name_category" value="Колодцы"/>
             <column name="picture" value="https://static.tildacdn.com/tild6137-3065-4064-b936-376531393331/photo.jpg"/>
         </insert>
 

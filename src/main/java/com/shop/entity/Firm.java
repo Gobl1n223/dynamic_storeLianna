@@ -43,8 +43,6 @@ public class Firm {
 
     private String phonenumber;
 
-    private String type;
-
     private String description;
 
     private String picture;
@@ -52,6 +50,8 @@ public class Firm {
     @Max(5)
     @Min(1)
     private Double rating;
+
+    private Long firm_type_id;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "firm")
     @JsonIgnore
