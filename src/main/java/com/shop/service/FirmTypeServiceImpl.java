@@ -2,6 +2,7 @@ package com.shop.service;
 
 import com.shop.dto.CategoryDto;
 import com.shop.dto.FirmShortDto;
+import com.shop.entity.FirmType;
 import com.shop.exception.CategoryNotFoundException;
 import com.shop.exception.FirmNotFoundException;
 import com.shop.mapper.FirmMapper;
@@ -48,6 +49,11 @@ public class FirmTypeServiceImpl implements FirmTypeService {
             throw new FirmNotFoundException("Продукт не найден");
 
         return categoryDtos;
+    }
+
+    @Override
+    public FirmType getFirmType(Long id) {
+        return productTypeRepository.getById(id);
     }
 
 

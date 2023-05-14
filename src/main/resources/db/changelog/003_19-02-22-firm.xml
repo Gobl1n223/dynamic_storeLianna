@@ -16,6 +16,7 @@
                 <constraints nullable="true"/>
             </column>
             <column name="picture" type="VARCHAR"/>
+            <column name="url" type="VARCHAR"/>
 
             <column name="description" type="VARCHAR"/>
 

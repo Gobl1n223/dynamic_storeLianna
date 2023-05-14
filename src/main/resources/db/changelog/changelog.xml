@@ -23,6 +23,7 @@
     <include file="_06_fill_db_blog_category.xml" relativeToChangelogFile="true"/>
     <include file="_07_fill_db_blog.xml" relativeToChangelogFile="true"/>
     <include file="_10_fill_db_blog_details.xml" relativeToChangelogFile="true"/>
+    <include file="login.xml" relativeToChangelogFile="true"/>
 
 
 </databaseChangeLog>

@@ -13,6 +13,7 @@
             <column name="name" value="Комфорт Лайн"/>
             <column name="address" value="Революционная ул., 130, Самара"/>
             <column name="phonenumber" value ="+7 (846) 201-03-31"/>
+            <column name="url" value="https://www.rusprofile.ru/id/764608"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=0e8f5b704a7696cea2e88bba61ca990677fd6818-7942262-images-thumbs&amp;n=13"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>
@@ -26,6 +27,7 @@
             <column name="name" value="Атлас Копко"/>
             <column name="address" value="ул. Авроры, 63, Самара"/>
             <column name="phonenumber" value ="8 (800) 700-12-46"/>
+            <column name="url" value="https://www.atlascopco.com/ru-kz"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=a4e94a657e325637021dbeb553e580d944290c9d-7755608-images-thumbs&amp;n=13"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
@@ -39,6 +41,7 @@
             <column name="name" value="Эко-Дом"/>
             <column name="address" value="г. Самара, ул. Мичурина 21 Б, офис 9"/>
             <column name="phonenumber" value ="8 (939) 718-18-88"/>
+            <column name="url" value="https://экодомподключ.рф"/>
             <column name="picture" value="https://izmddt.my1.ru/redsait/515dbb36b47e406383c7109ac6622864.jpg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
@@ -52,6 +55,7 @@
             <column name="name" value="ПИК"/>
             <column name="address" value="г.Москва, ул. Баррикадная, д.19, стр.1"/>
             <column name="phonenumber" value ="+7 (495) 5059733"/>
+            <column name="url" value="https://www.pik.ru"/>
             <column name="picture" value="https://erzrf.ru/erz-rest/api/v1/document?id=16666682001&amp;type=LOGO&amp;nocache=1681272334666"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Фундаменты')"/>
@@ -65,6 +69,7 @@
             <column name="name" value="ЭнергоПроектСтройИзыскания"/>
             <column name="address" value="Невская ул., 3, Самара"/>
             <column name="phonenumber" value ="+7 (846) 276-41-21"/>
+            <column name="url" value="http://www.stroybest.ru/catalog/view/11607"/>
             <column name="picture" value="https://pbs.twimg.com/media/DYbTtMYX4AAqjid.jpg:large"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
@@ -82,6 +87,7 @@
             <column name="name" value="Бастион"/>
             <column name="address" value="Партизанская ул., 19, Самара"/>
             <column name="phonenumber" value ="+7 (927) 007-74-24"/>
+            <column name="url" value="http://b-pm.net"/>
             <column name="picture" value="https://poisk-firm.ru/storage/employer/logo/0a/b4/0a/3b3143f830a9c25d5885c552cc.jpg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Пластиковые окна')"/>
@@ -95,6 +101,7 @@
             <column name="name" value="HausWell"/>
             <column name="address" value="Московское шоссе, 16-й километр, 1В, стр. 2, Самара"/>
             <column name="phonenumber" value ="+7 (927) 725-13-45"/>
+            <column name="url" value="https://hauswell.ru"/>
             <column name="picture" value="https://icomms.ru/images/firms/1134911/full_e857027407c352195d6e4f2cb032f7a1.jpg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Колодцы')"/>
@@ -131,6 +138,7 @@
             <column name="name" value="Стройинвест"/>
             <column name="address" value="15, 9-й квартал, Самара"/>
             <column name="phonenumber" value ="+7 (846) 212-99-47"/>
+            <column name="url" value="https://spark-interfax.ru/samarskaya-oblast-samara/ooo-stroiinvest-inn-6316235070-ogrn-1176313048427-53a1aef0e7cc4a65a56cfbbe692a45c7"/>
             <column name="picture" value="https://s.rbk.ru/v1_companies_s3/resized/1200xH/media/trademarks/9e590041-9345-4066-be6e-403b94118f9e.jpg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
@@ -144,6 +152,7 @@
             <column name="name" value="Техзащита"/>
             <column name="address" value="ул. Яблочкина, 12, Челябинск"/>
             <column name="phonenumber" value ="+7 (351) 734-99-12"/>
+            <column name="url" value="https://tz74.ru"/>
             <column name="picture" value="http://images.mirstroek.ru/images/users_logos/big/44797.jpeg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Колодцы')"/>
@@ -163,6 +172,7 @@
             <column name="name" value="Роял винил"/>
             <column name="address" value="ул. Гагарина, 46, Самара"/>
             <column name="phonenumber" value ="+7 (846) 205-33-25"/>
+            <column name="url" value="http://www.stroybest.ru/catalog/view/17514"/>
             <column name="picture" value="https://avatars.mds.yandex.net/i?id=f2ecda6eeb179fb905745c553dc5334a700e6313-7975524-images-thumbs&amp;n=13"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
@@ -177,6 +187,7 @@
             <column name="name" value="Эклипс-Самара"/>
             <column name="address" value="Ташкентская ул., 169, Самара"/>
             <column name="phonenumber" value ="+7 (846) 267-17-17"/>
+            <column name="url" value="https://www.list-org.com/company/1915707"/>
             <column name="picture" value="https://poisk-firm.ru/storage/employer/logo/91/aa/b1/fb6ce6db4199083f4a60816b4d.jpg"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
@@ -197,6 +208,7 @@
             <column name="name" value="Эконом"/>
             <column name="address" value="Ташкентская ул., 169, Самара"/>
             <column name="phonenumber" value ="+7 (927) 606-82-14"/>
+            <column name="url" value="http://economproekt.ru"/>
             <column name="picture" value="https://11.img.avito.st/image/1/umRQGba_Fo0mt4SFKG-AJqW6EIfuehkf7LoUi-i8FI3k_A"/>
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>

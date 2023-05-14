@@ -21,9 +21,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Set;
 
-/**
- * Продукт
- */
+
 @Entity
 @Setter
 @Getter
@@ -46,6 +44,8 @@ public class Firm {
     private String description;
 
     private String picture;
+
+    private String url;
 
     @Max(5)
     @Min(1)

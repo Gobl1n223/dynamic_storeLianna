@@ -7,6 +7,7 @@ import com.shop.dto.FirmShortDto;
 import com.shop.dto.ShortBlogDto;
 import com.shop.dto.comment.FirmReviewCommentDto;
 import com.shop.entity.Firm;
+import com.shop.entity.FirmType;
 import com.shop.service.BlogService;
 import com.shop.service.FirmCommentService;
 import com.shop.service.FirmService;
@@ -63,11 +64,14 @@ public class FirmController {
         return "blocks/hea";
     }
 
-    @GetMapping("/single-firm")
-    public String getSingleFirm() {
+    @GetMapping("/product-details/{id}")
+    public String getSingleFirm(@PathVariable Long id, Model model) {
 
+        Firm firm = firmService.getById(id);
 
-        return "single-firm";
+        model.addAttribute("firm", firm);
+
+        return "product-details";
     }
 
     @GetMapping
@@ -86,8 +90,18 @@ public class FirmController {
         Firm firm = firmService.getById(id);
         model.addAttribute("firm", firm);
 
-        return "firm-details";
+        return "product-details";
     }
+
+
+    @GetMapping("/login")
+    public String login(Model model, @RequestParam(value = "login") String login,
+                        @RequestParam(value = "password") String password) {
+
+
+        return "login";
+    }
+
 
     @GetMapping("product/product/{id}")
     public String getProductById1(@PathVariable Long id, Model model) {
@@ -118,9 +132,12 @@ public class FirmController {
         List<Firm> firms = firmService.getAll().stream().filter(fi -> categoryId.equals(fi.getFirm_type_id()))
                 .collect(Collectors.toList());
 
-        model.addAttribute("firms", firms);
+        FirmType firmType = firmTypeService.getFirmType(firms.get(0).getFirm_type_id());
 
-        return "index";
+        model.addAttribute("firms", firms);
+        model.addAttribute("type", firmType);
+
+        return "firm-category";
     }
 
 
