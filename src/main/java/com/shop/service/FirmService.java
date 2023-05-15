@@ -12,7 +12,6 @@ import java.util.List;
 public interface FirmService {
 
     List<Firm> getAll();
-    List<BasketFirmDto> getFirmsForBasketByIds(String ids);
     Firm getById(Long id);
 
 }

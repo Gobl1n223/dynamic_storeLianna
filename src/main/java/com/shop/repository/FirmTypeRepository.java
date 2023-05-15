@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FirmTypeRepository extends JpaRepository<FirmType, Long> {
 
+    FirmType getById(Long id);
 }

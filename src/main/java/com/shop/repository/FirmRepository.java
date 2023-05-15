@@ -33,4 +33,6 @@ public interface FirmRepository extends JpaRepository<Firm, Long> {
   Optional<Firm> findFirmById(@Param("id") Long id);
 */
 
+    Firm getById(Long id);
+
 }

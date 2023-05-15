@@ -96,6 +96,7 @@
         nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
     }
 </style>
+<header>
 <div class="container" style="width: 2000px; height: 200px">
     <img src="https://patentus.ru/blog/wp-content/uploads/2014/09/rzd-logo-1024x551.jpg" alt="image" style="height: 130px; left: 300px"/>
     <nav class="navbar navbar-default navbar-mobile bootsnav" style="left: 550px; top:-120px">
@@ -106,7 +107,6 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
-                <li alt="ГЛАВНАЯ"><a href="/">Главная</a></li>
                 <li alt="ВСЕ ФИРМЫ"><a href="#">Все фирмы</a></li>
                 <li class="dropdown" alt="КАТЕГОРИИ ФИРМ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категории фирм</a>
@@ -131,8 +131,11 @@
                 </li>
                 <li alt="О НАС"><a href="#">О нас</a></li>
                 <li alt="КОНТАКТЫ"><a href="#">Контакты</a></li>
+                <li th:if="${userName == null}" style="left: 420px"><a href="/login">Войти</a></li>
+                <li th:if="${userName == null}" style="left: 410px"><a href="/registration">Регистрация</a></li>
+                <li th:if="${userName != null}" style="left: 420px"><a href="/#" th:text="${userName}"></a></li>
             </ul>
         </div>
     </nav>
-
 </div>
+</header>

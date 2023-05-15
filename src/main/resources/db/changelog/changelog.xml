@@ -20,10 +20,8 @@
     <include file="_02_fill_db_firm_feature.xml" relativeToChangelogFile="true"/>
     <include file="_03_fill_db_firm.xml" relativeToChangelogFile="true"/>
     <include file="_04_fill_db_value_firm_feature.xml" relativeToChangelogFile="true"/>
-    <include file="_06_fill_db_blog_category.xml" relativeToChangelogFile="true"/>
-    <include file="_07_fill_db_blog.xml" relativeToChangelogFile="true"/>
-    <include file="_10_fill_db_blog_details.xml" relativeToChangelogFile="true"/>
-    <include file="login.xml" relativeToChangelogFile="true"/>
+
+
 
 
 </databaseChangeLog>

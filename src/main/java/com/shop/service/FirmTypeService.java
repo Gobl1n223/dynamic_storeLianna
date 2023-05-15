@@ -9,8 +9,6 @@ import java.util.List;
 
 public interface FirmTypeService {
 
-    List<CategoryDto> getCategories();
-
     FirmType getFirmType(Long id);
 
 

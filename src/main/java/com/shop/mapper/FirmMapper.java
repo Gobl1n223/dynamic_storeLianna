@@ -21,15 +21,6 @@ import static java.util.stream.Collectors.toList;
 @Mapper(componentModel = "spring")
 public interface FirmMapper {
 
-    @Mapping(source = "firm.picture", target = "picture", defaultExpression = "java(\"/assets/img/firm/no-image.jpg\")")
-    FirmShortDto toShortDto(Firm firm);
-
-    @Mapping(source = "firm.picture", target = "picture", defaultExpression = "java(\"/assets/img/firm/no-image.jpg\")")
-    @Mapping(target = "pictures", expression = "java(rebuildfirmPictures(firm))")
-    @Mapping(source = "firmComment", target = "firmComment")
-    @Mapping(source = "firm.rating", target = "rating", defaultValue = "0.0")
-    FirmDto toDto(Firm firm, List<ValueFirmFeatureDto> features, List<FirmCommentDto> firmComment);
-
 
     BasketFirmDto toBasketDto(FirmShortDto firmShortDto, Integer howMany);
 

@@ -1,29 +1,19 @@
 package com.shop.controllers;
 
-import com.shop.dto.BasketFirmDto;
-import com.shop.dto.CategoryDto;
-import com.shop.dto.FirmDto;
-import com.shop.dto.FirmShortDto;
-import com.shop.dto.ShortBlogDto;
-import com.shop.dto.comment.FirmReviewCommentDto;
+import com.shop.MyUserDetailsService;
 import com.shop.entity.Firm;
 import com.shop.entity.FirmType;
-import com.shop.service.BlogService;
-import com.shop.service.FirmCommentService;
+import com.shop.entity.User;
+import com.shop.repository.UserRepository;
 import com.shop.service.FirmService;
 import com.shop.service.FirmTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -36,21 +26,20 @@ public class FirmController {
 
     private final FirmTypeService firmTypeService;
     private final FirmService firmService;
-    private final BlogService blogService;
-    private final FirmCommentService firmCommentService;
+    private final MyUserDetailsService myUserDetailsService;
+
+    private final UserRepository userRepository;
 
 
     @Autowired
     public FirmController(
             FirmTypeService firmTypeService,
             FirmService firmService,
-            BlogService blogService,
-            FirmCommentService firmCommentService
-    ) {
+            MyUserDetailsService myUserDetailsService, UserRepository userRepository) {
         this.firmTypeService = firmTypeService;
         this.firmService = firmService;
-        this.blogService = blogService;
-        this.firmCommentService = firmCommentService;
+        this.myUserDetailsService = myUserDetailsService;
+        this.userRepository = userRepository;
     }
 
 
@@ -58,8 +47,8 @@ public class FirmController {
 
 
     @GetMapping("/1")
-    public String getProductsByCategor1() {
-
+    public String getProductsByCategor1(Model model) {
+        model.addAttribute("userName", myUserDetailsService.getUserName1());
 
         return "blocks/hea";
     }
@@ -79,6 +68,7 @@ public class FirmController {
 
         List<Firm> firms = firmService.getAll();
         model.addAttribute("firms", firms);
+        model.addAttribute("userName", myUserDetailsService.getUserName1());
 
         return "index";
     }
@@ -93,39 +83,6 @@ public class FirmController {
         return "product-details";
     }
 
-
-    @GetMapping("/login")
-    public String login(Model model, @RequestParam(value = "login") String login,
-                        @RequestParam(value = "password") String password) {
-
-
-        return "login";
-    }
-
-
-    @GetMapping("product/product/{id}")
-    public String getProductById1(@PathVariable Long id, Model model) {
-
-
-        Pageable page = PageRequest.of(0,8);
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
-
-
-        model.addAttribute("commentDto", new FirmReviewCommentDto());
-
-        return "product-details";
-    }
-
-    @GetMapping("categories")
-    public String getCategories(Model model) {
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
-
-        return "categories";
-    }
-
-
     @GetMapping("category/{categoryId}")
     public String getProductsByCategory(Model model, @NotNull @PathVariable Long categoryId) {
 
@@ -139,35 +96,18 @@ public class FirmController {
 
         return "firm-category";
     }
+    @GetMapping("/registration")
+    public String registretion(Model model) {
 
-
-    @GetMapping("search")
-    public String searchProduct(Model model, @RequestParam(value = "name") String name) {
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
-
-
-        return "product-search";
+        return "registration";
     }
 
 
-    @PostMapping("product/{id}")
-    public RedirectView comment(
-            @ModelAttribute("review") FirmReviewCommentDto firmReviewCommentDto,
-            @PathVariable Long id) {
-        firmCommentService.saveComment(firmReviewCommentDto, id);
+    @PostMapping("/registration/add")
+    public String registretionAdd(Model model, @RequestParam(value = "s") String userName, @RequestParam(value = "p") String password) {
+        userRepository.save(new User(userName, password, true, "USER"));
 
-        return new RedirectView("product/" + id);
+        return "succes";
     }
 
-
-    @GetMapping("basket")
-    public String checkBasket(@CookieValue(name = "basket", required = false) String basket, Model model) {
-
-        List<CategoryDto> categories = firmTypeService.getCategories();
-        model.addAttribute("categories", categories);
-
-
-        return "basket";
-    }
 }
