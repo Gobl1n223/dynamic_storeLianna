@@ -107,30 +107,26 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
-                <li alt="ВСЕ ФИРМЫ"><a href="#">Все фирмы</a></li>
+                <li alt="ВСЕ ФИРМЫ"><a href="/">Все фирмы</a></li>
                 <li class="dropdown" alt="КАТЕГОРИИ ФИРМ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категории фирм</a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="${'/category/1'}">Потолки</a></li>
-                        <li><a th:href="${'/category/2'}">Производство</a></li>
-                        <li><a th:href="${'/category/3'}">Дома</a></li>
-                        <li><a th:href="${'/category/4'}">Фундаменты</a></li>
-                        <li><a th:href="${'/category/5'}">Пластиковые окна</a></li>
-                        <li><a th:href="${'/category/6'}">Колодцы</a></li>
+                        <li><a th:href="${'/category/100'}">Потолки</a></li>
+                        <li><a th:href="${'/category/101'}">Производство</a></li>
+                        <li><a th:href="${'/category/102'}">Дома</a></li>
+                        <li><a th:href="${'/category/103'}">Фундаменты</a></li>
+                        <li><a th:href="${'/category/104'}">Пластиковые окна</a></li>
+                        <li><a th:href="${'/category/105'}">Колодцы</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" alt="ТОП ФИРМ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Топ фирм</a>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="${'/firm/3'}">Эко-Дом</a></li>
-                        <li><a th:href="${'/firm/10'}">Техзащита</a></li>
-                        <li><a th:href="${'/firm/13'}">Эконом</a></li>
-                        <li><a th:href="${'/firm/1'}">Комфорт Лайн</a></li>
-                        <li><a th:href="${'/firm/7'}">HausWellм</a></li>
+                    <ul  class="dropdown-menu" >
+                        <li th:each="topFirm : ${topFirms}"><a th:href="${'/firm/' + topFirm.getFirm().getId()}" th:text="${topFirm.getFirm().getName()}"></a></li>
                     </ul>
                 </li>
-                <li alt="О НАС"><a href="#">О нас</a></li>
-                <li alt="КОНТАКТЫ"><a href="#">Контакты</a></li>
+                <li alt="О НАС"><a href="/about_us">О нас</a></li>
+                <li alt="НАЙТИ ФИРМУ"><a href="/search">Найти фирму</a></li>
                 <li th:if="${userName == null}" style="left: 420px"><a href="/login">Войти</a></li>
                 <li th:if="${userName == null}" style="left: 410px"><a href="/registration">Регистрация</a></li>
                 <li th:if="${userName != null}" style="left: 420px"><a href="/#" th:text="${userName}"></a></li>

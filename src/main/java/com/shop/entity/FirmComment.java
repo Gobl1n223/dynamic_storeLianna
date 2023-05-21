@@ -40,11 +40,6 @@ public class FirmComment {
     @NotNull
     private String text;
 
-    @NotNull
-    @Max(5)
-    @Min(1)
-    private Integer rating;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private Firm firm;

@@ -147,17 +147,17 @@
 
             <div class="col-md-6 blog_box" th:each="firm : ${firms}">
                 <a href="#" class="mask">
-                    <img th:src="${firm.getPicture()}" alt="image" class="img-responsive zoom-img" />
+                    <img th:src="${firm.getFirm().getPicture()}" alt="image" class="img-responsive zoom-img" />
                 </a>
-                <h3><a th:href="${'/firm/' + firm.getId()}" th:text="${firm.getName()}"></a></h3>
+                <h3><a th:href="${'/firm/' + firm.getFirm().getId()}" th:text="${firm.getFirm().getName()}"></a></h3>
                 <div class="links">
                     <ul>
-                        <li><i class="fa blog-icon fa-user"> </i><a th:href="${'/firm/' + firm.getId()}" th:text="'Адресс' + ': ' + ${firm.getAddress()}"><span></span></a></li>
-                        <li><i class="fa blog-icon fa-comment"> </i><a th:href="${'/firm/' + firm.getId()}" th:text="'Номер телефона' + ': ' + ${firm.getPhonenumber()}"><span></span></a></li>
+                        <li><i class="fa blog-icon fa-user"> </i><a th:href="${'/firm/' + firm.getFirm().getId()}" th:text="'Адресс' + ': ' + ${firm.getFirm().getAddress()}"><span></span></a></li>
+                        <li><i class="fa blog-icon fa-comment"> </i><a th:href="${'/firm/' + firm.getFirm().getId()}" th:text="'Номер телефона' + ': ' + ${firm.getFirm().getPhonenumber()}"><span></span></a></li>
                     </ul>
                 </div>
-                <p th:text="${firm.getDescription()}"></p>
-                <a th:href="${'/firm/' + firm.getId()}" class="btn1 btn-8 btn-8c">Смотреть</a>
+                <p th:text="${firm.getFirm().getDescription()}"></p>
+                <a th:href="${'/firm/' + firm.getFirm().getId()}" class="btn1 btn-8 btn-8c">Смотреть</a>
                 <div class="clearfix"></div>
             </div>
         </div>

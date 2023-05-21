@@ -18,7 +18,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>
             <column name="description" value="Наша компания занимается установкой натяжных потолков в самаре. Специалисты нашей компании выполняют руботу по монтажу потолков любой сложности и конфигурации. Все работы ведутся строго с серцифицированными материалами."/>
-            <column name="rating" value="4.6"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -32,7 +32,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
             <column name="description" value="Компания Atlas Copco занимается производством и продажей компрессоров дизельных передвижных., сдает в аренду и обслуживает оборудование."/>
-            <column name="rating" value="4.3"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -46,7 +46,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
             <column name="description" value="За 13 лет работы на строительном рынке нами реализовано более 140 проектов. «ЭкоДом» – это четкий производственный процесс, сплоченный коллектив, высококвалифицированные специалисты."/>
-            <column name="rating" value="4.1"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -60,7 +60,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Фундаменты')"/>
             <column name="description" value="Мы создаем передовые технологические сервисы и продукты, позволяющие нам находить инновационные решения во всех сферах недвижимости. Наша миссия — изменить повседневность, создав более комфортные, безопасные и экологичные условия для жизни."/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -78,7 +78,7 @@
 •проектирование многоэтажных жилых домов и комплексное проектирование административных зданий и сооружений,
 •комплексное проектирование производственных и промышленных объектов,
 •проведение проектных работ в сфере реконструкции зданий "/>
-            <column name="rating" value="4.7"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -92,7 +92,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Пластиковые окна')"/>
             <column name="description" value="Все виды ремонтно-отделочных работ под ключ!"/>
-            <column name="rating" value="4.7"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -116,7 +116,7 @@
 -реализация любых проектов
 -работаем без предоплаты
 -бесплатное консультирование"/>
-            <column name="rating" value="4.7"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -129,7 +129,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Фундаменты')"/>
             <column name="description" value="Промышленное строительство - быстровозводимые здания, модульные здания. Комплексная реконструкция зданий и сооружений любого уровня сложности."/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -143,7 +143,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Производство')"/>
             <column name="description" value="ООО «СТРОЙИНВЕСТ» специализируется на производстве и поставках железобетонных изделий для мостового и дорожного строительства. На рынке уже более 26 лет. В ассортименте представлены железобетонные водопропускные трубы, изделия для водоотведения и водосброса, дорожные плиты, мостовые сваи, ЖБИ для устройства гофрированных труб, звенья прямоугольных и круглых труб всех типов и размеров, а также комплектующих к ним."/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -163,7 +163,7 @@
 общестроительные и отделочные работы;
 алюминиевые офисные перегородки;
 монтаж систем вентиляции и кондиционирования;"/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -178,7 +178,7 @@
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Дома')"/>
             <column name="description" value="Компания предоставляет полный комплекс услуг монтажа натяжных потолков, а также встраиваемого оборудования. Широкий выбор фактур и оттенков плёнки. Выполнение заказов любой сложности с гарантией качества. Гибкость ценовой политики.
 Сотрудничество, как с лицами, занимающимися продажей и установкой натяжных потолков, так и с организациями."/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -199,7 +199,7 @@
 - полиуретановые композиции
 - строительство бассейнов под ключ
 - системы водоподготовки"/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
 
         <insert
@@ -213,7 +213,7 @@
             <column name="firm_type_id"
                     valueComputed="(SELECT firm_type.id from firm_type where name_category='Потолки')"/>
             <column name="description" value="Наша компания занимается установкой и ремонтом натяжных потолков. Мы используем только качественные и проверенные материалы. Все наши работники мастера своего дела. Компетентные и вежливые менеджеры ответят на все Ваши вопросы. На выполненные работы предоставляем гарантию."/>
-            <column name="rating" value="4.9"/>
+            <column name="rating" value="0.0"/>
         </insert>
     </changeSet>
 

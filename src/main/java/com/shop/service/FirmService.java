@@ -14,4 +14,9 @@ public interface FirmService {
     List<Firm> getAll();
     Firm getById(Long id);
 
+    FirmDto getFirmDto(Long id);
+
+    void setRating(Firm firm, Integer num);
+    List<FirmDto> getFirmDtos();
+
 }
